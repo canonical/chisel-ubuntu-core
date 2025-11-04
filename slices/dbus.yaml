@@ -16,6 +16,16 @@ slices:
     contents:
       /usr/lib/dbus-*/dbus-daemon-launch-helper:
 
+  config:
+    contents:
+      /etc/default/dbus:
+
+  init-d:
+    essential:
+      - dbus_config
+    contents:
+      /etc/init.d/dbus:
+
   services:
     essential:
       dbus-system-bus-common_services:

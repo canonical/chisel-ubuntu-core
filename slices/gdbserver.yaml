@@ -1,0 +1,22 @@
+package: gdbserver
+
+essential:
+  - gdbserver_copyright
+
+slices:
+  bins:
+    essential:
+      - gdbserver_libs
+      - libc6_libs
+      - libgcc-s1_libs
+      - libstdc++6_libs
+    contents:
+      /usr/bin/gdbserver:
+
+  libs:
+    contents:
+      /usr/lib/libinproctrace.so:
+
+  copyright:
+    contents:
+      /usr/share/doc/gdbserver/copyright:

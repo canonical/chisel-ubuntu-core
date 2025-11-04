@@ -1,0 +1,13 @@
+package: login.defs
+
+essential:
+  - login.defs_copyright
+
+slices:
+  config:
+    contents:
+      /etc/login.defs:
+
+  copyright:
+    contents:
+      /usr/share/doc/login.defs/copyright:

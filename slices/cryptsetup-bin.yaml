@@ -1,0 +1,27 @@
+package: cryptsetup-bin
+
+essential:
+  - cryptsetup-bin_copyright
+
+slices:
+  bins:
+    essential:
+      - cryptsetup-bin_tmpfiles-d
+      - libblkid1_libs
+      - libc6_libs
+      - libcryptsetup12_libs
+      - libpopt0_libs
+      - libuuid1_libs
+    contents:
+      /usr/sbin/cryptsetup:
+      /usr/sbin/integritysetup:
+      /usr/sbin/veritysetup:
+
+  # creates the /run/cryptsetup directory, needed by cryptsetup at runtime
+  tmpfiles-d:
+    contents:
+      /usr/lib/tmpfiles.d/cryptsetup.conf:
+
+  copyright:
+    contents:
+      /usr/share/doc/cryptsetup-bin/copyright:

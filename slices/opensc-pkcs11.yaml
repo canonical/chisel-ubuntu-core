@@ -1,0 +1,30 @@
+package: opensc-pkcs11
+
+essential:
+  - opensc-pkcs11_copyright
+
+slices:
+  libs:
+    essential:
+      - libc6_libs
+      - libeac3_libs
+      - libglib2.0-0t64_libs
+      - libssl3t64_libs
+      - zlib1g_libs
+    contents:
+      /usr/lib/*-linux-*/libopensc.so.12*:
+      /usr/lib/*-linux-*/libsmm-local.so.12*:
+      /usr/lib/*-linux-*/onepin-opensc-pkcs11.so:
+      /usr/lib/*-linux-*/opensc-pkcs11.so:
+      /usr/lib/*-linux-*/pkcs11-spy.so:
+      /usr/lib/*-linux-*/pkcs11/onepin-opensc-pkcs11.so:
+      /usr/lib/*-linux-*/pkcs11/opensc-pkcs11.so:
+      /usr/lib/*-linux-*/pkcs11/pkcs11-spy.so:
+
+  p11-kit:
+    contents:
+      /usr/share/p11-kit/modules/opensc-pkcs11.module:
+
+  copyright:
+    contents:
+      /usr/share/doc/opensc-pkcs11/copyright:

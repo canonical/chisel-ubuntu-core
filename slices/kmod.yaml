@@ -1,0 +1,38 @@
+package: kmod
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libkmod2_libs
+      - libssl3t64_libs
+    contents:
+      /usr/bin/kmod:
+      /usr/bin/lsmod: {symlink: /usr/bin/kmod}
+      /usr/sbin/depmod: {symlink: /usr/bin/kmod}
+      /usr/sbin/insmod: {symlink: /usr/bin/kmod}
+      /usr/sbin/modinfo: {symlink: /usr/bin/kmod}
+      /usr/sbin/modprobe: {symlink: /usr/bin/kmod}
+      /usr/sbin/rmmod: {symlink: /usr/bin/kmod}
+
+  config:
+    contents:
+      /etc/depmod.d/ubuntu.conf:
+      /etc/modules:
+        text: |
+          # /etc/modules is obsolete and has been replaced by /etc/modules-load.d/.
+          # Please see modules-load.d(5) and modprobe.d(5) for details.
+          #
+          # Updating this file still works, but it is undocumented and unsupported.
+        mode: 0644
+      /etc/modprobe.d/blacklist-ath_pci.conf:
+      /etc/modprobe.d/blacklist-firewire.conf:
+      /etc/modprobe.d/blacklist-framebuffer.conf:
+      /etc/modprobe.d/blacklist-rare-network.conf:
+      /etc/modprobe.d/blacklist.conf:
+      /etc/modprobe.d/iwlwifi.conf:
+      /usr/lib/modprobe.d/aliases.conf:
+
+  initramfs-tools:
+    contents:
+      /usr/share/initramfs-tools/hooks/kmod:

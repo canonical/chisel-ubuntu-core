@@ -1,0 +1,40 @@
+package: rust-coreutils
+
+essential:
+  - rust-coreutils_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+    contents:
+      /usr/bin/uu-basename:
+      /usr/bin/uu-cat:
+      /usr/bin/uu-chmod:
+      /usr/bin/uu-chown:
+      /usr/bin/uu-cp:
+      /usr/bin/uu-cut:
+      /usr/bin/uu-date:
+      /usr/bin/uu-dirname:
+      /usr/bin/uu-echo:
+      /usr/bin/uu-env:
+      /usr/bin/uu-head:
+      /usr/bin/uu-id:
+      /usr/bin/uu-ln:
+      /usr/bin/uu-ls:
+      /usr/bin/uu-mkdir:
+      /usr/bin/uu-mv:
+      /usr/bin/uu-pwd:
+      /usr/bin/uu-rm:
+      /usr/bin/uu-rmdir:
+      /usr/bin/uu-sleep:
+      /usr/bin/uu-sort:
+      /usr/bin/uu-tail:
+      /usr/bin/uu-touch:
+      /usr/bin/uu-tr:
+      /usr/bin/uu-true:
+      /usr/bin/uu-wc:
+
+  copyright:
+    contents:
+      /usr/share/doc/rust-coreutils/copyright:

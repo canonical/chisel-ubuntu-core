@@ -5,6 +5,10 @@ essential:
   libgnutls30t64_copyright:
 
 slices:
+  config:
+    contents:
+      /etc/gnutls/config:
+
   libs:
     essential:
       libc6_libs:

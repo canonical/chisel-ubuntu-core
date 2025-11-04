@@ -18,6 +18,12 @@ slices:
       /usr/sbin/fdisk:
       /usr/sbin/sfdisk:
 
+  bash-completions:
+    contents:
+      /usr/share/bash-completion/completions/cfdisk:
+      /usr/share/bash-completion/completions/fdisk:
+      /usr/share/bash-completion/completions/sfdisk:
+
   copyright:
     contents:
       /usr/share/doc/fdisk/copyright:
