@@ -16,6 +16,7 @@ slices:
     essential:
       iproute2_config:
       iproute2_dist:
+      libbpf1_libs:
       libcap2-bin_bins:
     contents:
       /usr/bin/ctstat:

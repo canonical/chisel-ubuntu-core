@@ -1,0 +1,17 @@
+package: libpam-systemd
+
+essential:
+  - libpam-systemd_copyright
+
+slices:
+  libs:
+    essential:
+      - libc6_libs
+      - libpam0g_libs
+      - libsystemd0_libs
+    contents:
+      /usr/lib/*-linux-*/security/pam_systemd.so:
+
+  copyright:
+    contents:
+      /usr/share/doc/libpam-systemd/copyright:

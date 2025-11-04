@@ -1,0 +1,56 @@
+package: opensc
+
+essential:
+  - opensc_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libeac3_libs
+      - libreadline8t64_libs
+      - libssl3t64_libs
+      - opensc_config
+      - opensc-pkcs11_libs
+      - zlib1g_libs
+    contents:
+      /usr/bin/cardos-tool:
+      /usr/bin/cryptoflex-tool:
+      /usr/bin/dnie-tool:
+      /usr/bin/dtrust-tool:
+      /usr/bin/egk-tool:
+      /usr/bin/eidenv:
+      /usr/bin/gids-tool:
+      /usr/bin/goid-tool:
+      /usr/bin/iasecc-tool:
+      /usr/bin/netkey-tool:
+      /usr/bin/npa-tool:
+      /usr/bin/openpgp-tool:
+      /usr/bin/opensc-asn1:
+      /usr/bin/opensc-explorer:
+      /usr/bin/opensc-notify:
+      /usr/bin/opensc-tool:
+      /usr/bin/piv-tool:
+      /usr/bin/pkcs11-register:
+      /usr/bin/pkcs11-tool:
+      /usr/bin/pkcs15-crypt:
+      /usr/bin/pkcs15-init:
+      /usr/bin/pkcs15-tool:
+      /usr/bin/sc-hsm-tool:
+      /usr/bin/westcos-tool:
+
+  config:
+    contents:
+      /etc/eac/cvc/DESCHSMCVCA00001:
+      /etc/eac/cvc/DESRCACC100001:
+      /etc/opensc/opensc.conf:
+      /usr/share/opensc/**:
+
+  desktop-links:
+    contents:
+      /etc/xdg/autostart/pkcs11-register.desktop:
+      /usr/share/applications/org.opensc.notify.desktop:
+
+  copyright:
+    contents:
+      /usr/share/doc/opensc/copyright:

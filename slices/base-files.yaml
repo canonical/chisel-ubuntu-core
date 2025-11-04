@@ -77,6 +77,22 @@ slices:
     contents:
       /var/lib/chisel/**: {generate: manifest}
 
+  motd:
+    essential:
+      - base-files_etc
+    contents:
+      /etc/update-motd.d/00-header:
+      /etc/update-motd.d/10-help-text:
+      /usr/share/motd:
+
+  motd-news:
+    essential:
+      - base-files_motd
+    contents:
+      /etc/update-motd.d/50-motd-news:
+      /usr/lib/systemd/system/motd-news.service:
+      /usr/lib/systemd/system/motd-news.timer:
+
   copyright:
     contents:
       /usr/share/doc/base-files/copyright:

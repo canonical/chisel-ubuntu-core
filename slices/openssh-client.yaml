@@ -74,6 +74,8 @@ slices:
       /usr/bin/ssh-copy-id:
 
   services:
+    essential:
+      - openssh-client_bins
     contents:
       /usr/lib/systemd/user/graphical-session-pre.target.wants/ssh-agent.service:
       /usr/lib/systemd/user/ssh-agent.service:

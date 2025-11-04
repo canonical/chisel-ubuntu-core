@@ -1,0 +1,56 @@
+package: wpasupplicant
+
+essential:
+  - wpasupplicant_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libdbus-1-3_libs
+      - libnl-3-200_libs
+      - libnl-3-200_config
+      - libnl-genl-3-200_libs
+      - libnl-route-3-200_libs
+      - libpcsclite1_libs
+      - libreadline8t64_libs
+      - libssl3t64_libs
+    contents:
+      /usr/bin/wpa_passphrase:
+      /usr/sbin/wpa_action:
+      /usr/sbin/wpa_cli:
+      /usr/sbin/wpa_supplicant:
+
+  scripts:
+    contents:
+      /etc/wpa_supplicant/action_wpa.sh:
+      /etc/wpa_supplicant/functions.sh:
+      /etc/wpa_supplicant/ifupdown.sh:
+
+  config:
+    contents:
+      /etc/ifplugd/action.d/action_wpa:
+      /etc/network/if-down.d/wpasupplicant:
+      /etc/network/if-post-down.d/wpasupplicant:
+      /etc/network/if-pre-up.d/wpasupplicant:
+      /etc/network/if-up.d/wpasupplicant:
+      /usr/lib/NetworkManager/conf.d/no-mac-addr-change.conf:
+      /usr/lib/pm-utils/sleep.d/60_wpa_supplicant:
+
+  services:
+    essential:
+      - systemd_services
+      - wpasupplicant_bins
+      - wpasupplicant_config
+      - wpasupplicant_scripts
+    contents:
+      /usr/lib/systemd/system/wpa_supplicant-nl80211@.service:
+      /usr/lib/systemd/system/wpa_supplicant-wired@.service:
+      /usr/lib/systemd/system/wpa_supplicant.service:
+      /usr/lib/systemd/system/wpa_supplicant@.service:
+      /usr/share/dbus-1/system-services/fi.w1.wpa_supplicant1.service:
+      /usr/share/dbus-1/system.d/wpa_supplicant.conf:
+
+  copyright:
+    contents:
+      /usr/share/doc/wpasupplicant/copyright:

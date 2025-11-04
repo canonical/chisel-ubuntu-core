@@ -38,6 +38,14 @@ slices:
     contents:
       /usr/lib/*-linux-*/libgthread-2.0.so.0*:
 
+  helpers:
+    essential:
+      - libglib2.0-0t64_core
+    contents:
+      /usr/lib/*-linux-*/glib-2.0/gio-launch-desktop:
+      /usr/lib/*-linux-*/glib-2.0/gio-querymodules:
+      /usr/lib/*-linux-*/glib-2.0/glib-compile-schemas:
+
   libs:
     essential:
       libffi8_libs:

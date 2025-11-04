@@ -1,0 +1,63 @@
+package: systemd-cryptsetup
+
+essential:
+  - systemd-cryptsetup_copyright
+
+slices:
+  bash-completion:
+    contents:
+      /usr/share/bash-completion/completions/systemd-cryptenroll:
+
+  bins:
+    essential:
+      - libc6_libs
+      - systemd-cryptsetup_services
+    contents:
+      /usr/bin/systemd-cryptenroll:
+      /usr/bin/systemd-cryptsetup:
+
+  libs:
+    contents:
+      /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-fido2.so:
+      /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-pkcs11.so:
+      /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-tpm2.so:
+
+  services:
+    essential:
+      - libc6_libs
+      - libcryptsetup12_libs
+      - libssl3t64_libs
+      - libsystemd-shared_libs
+      - systemd_services
+      - systemd_tpm2
+      - systemd-cryptsetup_libs
+      - systemd-cryptsetup_system-generators
+    contents:
+      /usr/lib/systemd/system/cryptsetup-pre.target:
+      /usr/lib/systemd/system/cryptsetup.target:
+      /usr/lib/systemd/system/initrd-root-device.target.wants/remote-cryptsetup.target:
+      /usr/lib/systemd/system/initrd-root-device.target.wants/remote-veritysetup.target:
+      /usr/lib/systemd/system/integritysetup-pre.target:
+      /usr/lib/systemd/system/integritysetup.target:
+      /usr/lib/systemd/system/remote-cryptsetup.target:
+      /usr/lib/systemd/system/remote-veritysetup.target:
+      /usr/lib/systemd/system/sysinit.target.wants/cryptsetup.target:
+      /usr/lib/systemd/system/sysinit.target.wants/integritysetup.target:
+      /usr/lib/systemd/system/sysinit.target.wants/veritysetup.target:
+      /usr/lib/systemd/system/system-systemd\x2dcryptsetup.slice:
+      /usr/lib/systemd/system/system-systemd\x2dveritysetup.slice:
+      /usr/lib/systemd/system/veritysetup-pre.target:
+      /usr/lib/systemd/system/veritysetup.target:
+      /usr/lib/systemd/systemd-cryptsetup:
+      /usr/lib/systemd/systemd-integritysetup:
+      /usr/lib/systemd/systemd-veritysetup:
+
+  system-generators:
+    contents:
+      /usr/lib/systemd/system-generators/systemd-cryptsetup-generator:
+      /usr/lib/systemd/system-generators/systemd-integritysetup-generator:
+      /usr/lib/systemd/system-generators/systemd-veritysetup-generator:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-cryptsetup/copyright:

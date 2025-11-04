@@ -1,0 +1,34 @@
+package: locales
+
+essential:
+  - locales_copyright
+
+slices:
+  charmaps-all:
+    contents:
+      /usr/share/i18n/charmaps/**:
+
+  locales-all:
+    contents:
+      /usr/share/i18n/locales/**:
+
+  scripts:
+    contents:
+      /usr/sbin/locale-gen:
+      /usr/sbin/update-locale:
+      /usr/sbin/validlocale:
+
+  standard:
+    essential:
+      - locales_charmaps-all
+      - locales_locales-all
+      - locales_scripts
+      - locales_supported
+
+  supported:
+    contents:
+      /usr/share/i18n/SUPPORTED:
+
+  copyright:
+    contents:
+      /usr/share/doc/locales/copyright:

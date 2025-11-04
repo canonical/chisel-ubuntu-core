@@ -4,7 +4,16 @@ essential:
   openssh-server_copyright:
 
 slices:
+  # Standard installation - includes all components
   bins:
+    essential:
+      - openssh-server_config
+      - openssh-server_daemon
+      - openssh-server_services
+      - openssh-server_utils
+
+  # Core SSH daemon and session handling
+  daemon:
     # openssh-server actually depends on adduser as well to create and remove
     # a user during package install/removal - however we don't support this
     # currently so adduser is not added here.
@@ -27,25 +36,49 @@ slices:
       procps_bins:
       zlib1g_libs:
     contents:
-      /usr/lib/openssh/ssh-session-cleanup:
       /usr/sbin/sshd:
+      /usr/lib/openssh/sshd-auth:
+      /usr/lib/openssh/sshd-session:
 
-  config:
+  # Helper utilities
+  utils:
+    essential:
+      - dash_bins
+      - procps_bins
     contents:
+      /usr/lib/openssh/ssh-session-cleanup:
+
+  # Configuration files
+  config:
+    essential:
+      - opensysusers_scripts
+      - openssh-server_utils
+    contents:
+      /etc/default/ssh:
+      /etc/init.d/ssh:
       /etc/pam.d/sshd:
       /etc/ssh/moduli:
       /etc/ssh/sshd_config.d/:
       /etc/ufw/applications.d/openssh-server:
+      /usr/lib/sysusers.d/openssh-server.conf:
+      /usr/lib/tmpfiles.d/openssh-server.conf:
       /usr/share/openssh/sshd_config:
       /usr/share/openssh/sshd_config.md5sum:
 
+  # Systemd services
   services:
     essential:
-      init-system-helpers_bins:
+      openssh-server_config:
+      openssh-server_daemon:
+      systemd_bins:
     contents:
       /usr/lib/systemd/system/rescue-ssh.target:
       /usr/lib/systemd/system/ssh.service:
       /usr/lib/systemd/system/ssh.socket:
+      /usr/lib/systemd/system/sshd-keygen.service:
+      /usr/lib/systemd/system/sshd.service:
+      /usr/lib/systemd/system/sshd@.service:
+      /usr/lib/systemd/system-generators/sshd-socket-generator:
 
   copyright:
     essential:

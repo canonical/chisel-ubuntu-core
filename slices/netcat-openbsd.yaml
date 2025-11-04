@@ -11,6 +11,12 @@ slices:
     contents:
       /usr/bin/nc.openbsd:
 
+  # Emulate the postinst script by installing alternatives
+  nc-from-openbsd:
+    contents:
+      /usr/bin/nc: {symlink: /usr/bin/nc.openbsd}
+      /usr/bin/netcat: {symlink: /usr/bin/nc.openbsd}
+
   copyright:
     contents:
       /usr/share/doc/netcat-openbsd/copyright:

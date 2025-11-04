@@ -1,0 +1,44 @@
+package: systemd-resolved
+
+essential:
+  - systemd-resolved_copyright
+
+slices:
+  bash-completion:
+    contents:
+      /usr/share/bash-completion/completions/resolvectl:
+      /usr/share/bash-completion/completions/systemd-resolve:
+
+  bins:
+    essential:
+      - systemd-resolved_services
+    contents:
+      /usr/bin/resolvectl:
+      /usr/sbin/resolvconf:
+
+  config:
+    contents:
+      /etc/systemd/resolved.conf:
+      /usr/lib/systemd/resolved.conf.d/00-disable-mdns.conf:
+      /usr/lib/systemd/resolved.conf.d/cache-no-negative.conf:
+      /usr/lib/systemd/resolv.conf:
+      /usr/lib/sysusers.d/systemd-resolve.conf:
+      /usr/lib/tmpfiles.d/systemd-resolve.conf:
+
+  services:
+    essential:
+      - dbus_bins
+      - libc6_libs
+      - libssl3t64_libs
+      - libsystemd-shared_libs
+      - systemd-resolved_config
+      - systemd_services
+    contents:
+      /usr/lib/systemd/system/systemd-resolved.service:
+      /usr/share/dbus-1/system-services/org.freedesktop.resolve1.service:
+      /usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf:
+      /usr/lib/systemd/systemd-resolved:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-resolved/copyright:

@@ -1,0 +1,29 @@
+package: systemd-zram-generator
+
+essential:
+  - systemd-zram-generator_copyright
+
+slices:
+  config:
+    contents:
+      /usr/lib/modules-load.d/20-zram-generator.conf:
+      /usr/lib/systemd/zram-generator.conf:
+
+  services:
+    essential:
+      - libc6_libs
+      - libgcc-s1_libs
+      - systemd_detect-virt
+      - systemd_services
+      - systemd-zram-generator_config
+      - systemd-zram-generator_system-generators
+    contents:
+      /usr/lib/systemd/system/systemd-zram-setup@.service:
+
+  system-generators:
+    contents:
+      /usr/lib/systemd/system-generators/zram-generator:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-zram-generator/copyright:

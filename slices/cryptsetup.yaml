@@ -1,0 +1,53 @@
+package: cryptsetup
+
+essential:
+  - cryptsetup_copyright
+
+slices:
+  bash-completion:
+    contents:
+      /usr/share/bash-completion/completions/cryptdisks_start:
+      /usr/share/bash-completion/completions/cryptdisks_stop:
+
+  bins:
+    essential:
+      - cryptsetup-bin_bins
+      - dmsetup_bins
+      - libc6_libs
+      - cryptsetup_libs
+      - cryptsetup_config
+    contents:
+      /usr/sbin/cryptdisks_start:
+      /usr/sbin/cryptdisks_stop:
+      /usr/sbin/luksformat:
+
+  config:
+    contents:
+      /etc/default/cryptdisks:
+
+  libs:
+    contents:
+      /usr/lib/cryptsetup/askpass:
+      /usr/lib/cryptsetup/checks/blkid:
+      /usr/lib/cryptsetup/checks/ext2:
+      /usr/lib/cryptsetup/checks/swap:
+      /usr/lib/cryptsetup/checks/un_blkid:
+      /usr/lib/cryptsetup/checks/xfs:
+      /usr/lib/cryptsetup/cryptdisks-functions:
+      /usr/lib/cryptsetup/functions:
+      /usr/lib/cryptsetup/scripts/decrypt_derived:
+      /usr/lib/cryptsetup/scripts/decrypt_gnupg:
+      /usr/lib/cryptsetup/scripts/decrypt_gnupg-sc:
+      /usr/lib/cryptsetup/scripts/decrypt_keyctl:
+      /usr/lib/cryptsetup/scripts/decrypt_opensc:
+      /usr/lib/cryptsetup/scripts/decrypt_ssl:
+      /usr/lib/cryptsetup/scripts/passdev:
+
+  init-d:
+    contents:
+      /etc/init.d/cryptdisks:
+      /etc/init.d/cryptdisks-early:
+
+  copyright:
+    contents:
+      /usr/share/doc/cryptsetup/copyright:

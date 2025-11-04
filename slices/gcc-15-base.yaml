@@ -4,6 +4,10 @@ essential:
   gcc-15-base_copyright:
 
 slices:
+  libs:
+    contents:
+      /usr/share/gcc-15/:
+
   copyright:
     contents:
       /usr/share/doc/gcc-15-base/copyright:
