@@ -1,13 +1,13 @@
 package: systemd-coredump
 
 essential:
-  - systemd-coredump_copyright
+  systemd-coredump_copyright:
 
 slices:
   bins:
     essential:
-      - libc6_libs
-      - systemd-coredump_services
+      libc6_libs:
+      systemd-coredump_services:
     contents:
       /usr/bin/coredumpctl:
 
@@ -22,9 +22,9 @@ slices:
 
   services:
     essential:
-      - libsystemd-shared_libs
-      - systemd-coredump_config
-      - systemd_services
+      libsystemd-shared_libs:
+      systemd-coredump_config:
+      systemd_services:
     contents:
       /usr/lib/systemd/system/sockets.target.wants/systemd-coredump.socket:
       /usr/lib/systemd/system/systemd-coredump.socket:

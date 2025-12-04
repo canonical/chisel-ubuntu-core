@@ -1,15 +1,15 @@
 package: gnutls-bin
 
 essential:
-  - gnutls-bin_copyright
+  gnutls-bin_copyright:
 
 slices:
   bins:
     essential:
-      - libc6_libs
-      - libgnutls-dane0t64_libs
-      - libgnutls30t64_libs
-      - libtasn1-6_libs
+      libc6_libs:
+      libgnutls-dane0t64_libs:
+      libgnutls30t64_libs:
+      libtasn1-6_libs:
     contents:
       /usr/bin/certtool:
       /usr/bin/danetool:

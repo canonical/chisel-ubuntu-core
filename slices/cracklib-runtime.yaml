@@ -1,7 +1,7 @@
 package: cracklib-runtime
 
 essential:
-  - cracklib-runtime_copyright
+  cracklib-runtime_copyright:
 
 # Cracklib runs /usr/sbin/update-cracklib on install, and this
 # in turns generate the cracklib caches. This is mostly possible to do
@@ -19,14 +19,14 @@ slices:
   # furthermore, libssl3t64 is required as well
   bins:
     essential:
-      - cracklib-runtime_config
-      - file_bins
-      - findutils_bins
-      - grep_bins
-      - gzip_bins
-      - libc6_libs
-      - libcrack2_libs
-      - libssl3t64_libs
+      cracklib-runtime_config:
+      file_bins:
+      findutils_bins:
+      grep_bins:
+      gzip_bins:
+      libc6_libs:
+      libcrack2_libs:
+      libssl3t64_libs:
     contents:
       /usr/sbin/cracklib-check:
       /usr/sbin/cracklib-format:

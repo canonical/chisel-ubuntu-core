@@ -39,13 +39,6 @@ slices:
       /usr/lib/locale/C.utf8/LC_TELEPHONE:
       /usr/lib/locale/C.utf8/LC_TIME:
 
-  iconv:
-    essential:
-      - libc6_libs
-    contents:
-      /usr/bin/iconv:
-      /usr/sbin/iconvconfig:
-
   getconf:
     essential:
       libc6_libs:

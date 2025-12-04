@@ -1,22 +1,20 @@
 package: polkitd
 
 essential:
-  - polkitd_copyright
+  polkitd_copyright:
 
 slices:
   bins:
     essential:
-      - libc6_libs
-      - libglib2.0-0t64_libs
-      - libpolkit-gobject-1-0_libs
+      libc6_libs:
+      libglib2.0-0t64_libs:
+      libpolkit-gobject-1-0_libs:
     contents:
       /usr/bin/pkaction:
       /usr/bin/pkcheck:
       /usr/bin/pkttyagent:
 
   config:
-    essential:
-      - opensysusers_scripts
     contents:
       /usr/lib/sysusers.d/polkit.conf:
       /usr/lib/tmpfiles.d/polkit-tmpfiles.conf:
@@ -24,18 +22,18 @@ slices:
 
   daemon:
     essential:
-      - dbus_services
-      - libc6_libs
-      - libduktape207_libs
-      - libexpat1_libs
-      - libglib2.0-0t64_libs
-      - libpam0g_libs
-      - libpolkit-agent-1-0_libs
-      - libpolkit-gobject-1-0_libs
-      - libsystemd0_libs
-      - polkitd_config
-      - polkitd_pam-profile
-      - polkitd_rules
+      dbus_services:
+      libc6_libs:
+      libduktape207_libs:
+      libexpat1_libs:
+      libglib2.0-0t64_libs:
+      libpam0g_libs:
+      libpolkit-agent-1-0_libs:
+      libpolkit-gobject-1-0_libs:
+      libsystemd0_libs:
+      polkitd_config:
+      polkitd_pam-profile:
+      polkitd_rules:
     contents:
       /usr/lib/policykit-1/polkit-agent-helper-1:
       /usr/lib/polkit-1/polkit-agent-helper-1:
@@ -48,7 +46,7 @@ slices:
 
   rules:
     essential:
-      - xml-core_catalog
+      xml-core_catalog:
     contents:
       /etc/polkit-1/rules.d/: { make: true, mode: 0755 }
       /usr/share/polkit-1/actions/org.freedesktop.policykit.policy:
@@ -59,10 +57,12 @@ slices:
 
   services:
     essential:
-      - polkitd_daemon
-      - systemd_login
-      - systemd_services
+      polkitd_daemon:
+      systemd_login:
+      systemd_services:
     contents:
+      /usr/lib/systemd/system/polkit-agent-helper.socket:
+      /usr/lib/systemd/system/polkit-agent-helper@.service:
       /usr/lib/systemd/system/polkit.service:
       /usr/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service:
       /usr/share/dbus-1/system.d/org.freedesktop.PolicyKit1.conf:

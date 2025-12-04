@@ -1,20 +1,20 @@
 package: wpasupplicant
 
 essential:
-  - wpasupplicant_copyright
+  wpasupplicant_copyright:
 
 slices:
   bins:
     essential:
-      - libc6_libs
-      - libdbus-1-3_libs
-      - libnl-3-200_libs
-      - libnl-3-200_config
-      - libnl-genl-3-200_libs
-      - libnl-route-3-200_libs
-      - libpcsclite1_libs
-      - libreadline8t64_libs
-      - libssl3t64_libs
+      libc6_libs:
+      libdbus-1-3_libs:
+      libnl-3-200_libs:
+      libnl-3-200_config:
+      libnl-genl-3-200_libs:
+      libnl-route-3-200_libs:
+      libpcsclite1_libs:
+      libreadline8t64_libs:
+      libssl3t64_libs:
     contents:
       /usr/bin/wpa_passphrase:
       /usr/sbin/wpa_action:
@@ -39,10 +39,10 @@ slices:
 
   services:
     essential:
-      - systemd_services
-      - wpasupplicant_bins
-      - wpasupplicant_config
-      - wpasupplicant_scripts
+      systemd_services:
+      wpasupplicant_bins:
+      wpasupplicant_config:
+      wpasupplicant_scripts:
     contents:
       /usr/lib/systemd/system/wpa_supplicant-nl80211@.service:
       /usr/lib/systemd/system/wpa_supplicant-wired@.service:

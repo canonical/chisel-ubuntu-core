@@ -1,18 +1,18 @@
 package: opensc
 
 essential:
-  - opensc_copyright
+  opensc_copyright:
 
 slices:
   bins:
     essential:
-      - libc6_libs
-      - libeac3_libs
-      - libreadline8t64_libs
-      - libssl3t64_libs
-      - opensc_config
-      - opensc-pkcs11_libs
-      - zlib1g_libs
+      libc6_libs:
+      libeac3_libs:
+      libreadline8t64_libs:
+      libssl3t64_libs:
+      opensc_config:
+      opensc-pkcs11_libs:
+      zlib1g_libs:
     contents:
       /usr/bin/cardos-tool:
       /usr/bin/cryptoflex-tool:

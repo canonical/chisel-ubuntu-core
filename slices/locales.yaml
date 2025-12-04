@@ -1,7 +1,7 @@
 package: locales
 
 essential:
-  - locales_copyright
+  locales_copyright:
 
 slices:
   charmaps-all:
@@ -20,10 +20,10 @@ slices:
 
   standard:
     essential:
-      - locales_charmaps-all
-      - locales_locales-all
-      - locales_scripts
-      - locales_supported
+      locales_charmaps-all:
+      locales_locales-all:
+      locales_scripts:
+      locales_supported:
 
   supported:
     contents:

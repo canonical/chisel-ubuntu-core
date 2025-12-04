@@ -1,0 +1,28 @@
+package: sudo-rs
+
+essential:
+  sudo-rs_copyright:
+
+slices:
+  bins:
+    essential:
+      libc6_libs:
+      libgcc-s1_libs:
+      libpam0g_libs:
+      sudo-common_config:
+      sudo-rs_cargo-libs:
+    contents:
+      /usr/bin/su-rs:
+      /usr/bin/sudo-rs:
+      /usr/bin/sudoedit-rs:
+      /usr/bin/visudo-rs:
+
+  cargo-libs:
+    contents:
+      /usr/lib/cargo/bin/su:
+      /usr/lib/cargo/bin/sudo:
+      /usr/lib/cargo/bin/visudo:
+
+  copyright:
+    contents:
+      /usr/share/doc/sudo-rs/copyright:

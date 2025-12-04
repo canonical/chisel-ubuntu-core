@@ -1,7 +1,7 @@
 package: opensysusers
 
 essential:
-  - opensysusers_copyright
+  opensysusers_copyright:
 
 slices:
   # /usr/bin/systemd-sysusers is actually part of this package
@@ -11,14 +11,16 @@ slices:
     # These are shell scripts requiring a symlink from /usr/bin/dash to
     # /usr/bin/sh.
     essential:
-      - coreutils_sort
-      - dash_bins
-      - grep_bins
-      - passwd_bins
+      coreutils_sort:
+      dash_bins:
+      grep_bins:
+      passwd_bins:
     contents:
       /usr/bin/opensysusers-sysusers:
 
   init-d:
+    essential:
+      init-system-helpers_core:
     contents:
       /etc/init.d/opensysusers:
 

@@ -1,12 +1,12 @@
 package: bash-completion
 
 essential:
-  - bash-completion_copyright
+  bash-completion_copyright:
 
 slices:
   bins:
     essential:
-      - bash-completion_config
+      bash-completion_config:
     contents:
       /usr/bin/dh_bash-completion:
   

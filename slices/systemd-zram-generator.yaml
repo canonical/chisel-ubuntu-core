@@ -1,7 +1,7 @@
 package: systemd-zram-generator
 
 essential:
-  - systemd-zram-generator_copyright
+  systemd-zram-generator_copyright:
 
 slices:
   config:
@@ -11,12 +11,12 @@ slices:
 
   services:
     essential:
-      - libc6_libs
-      - libgcc-s1_libs
-      - systemd_detect-virt
-      - systemd_services
-      - systemd-zram-generator_config
-      - systemd-zram-generator_system-generators
+      libc6_libs:
+      libgcc-s1_libs:
+      systemd_detect-virt:
+      systemd_services:
+      systemd-zram-generator_config:
+      systemd-zram-generator_system-generators:
     contents:
       /usr/lib/systemd/system/systemd-zram-setup@.service:
 

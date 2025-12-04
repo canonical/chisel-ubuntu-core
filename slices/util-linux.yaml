@@ -4,6 +4,7 @@ essential:
   util-linux_copyright:
 
 slices:
+  # Meta slice pulling in all the functional groups
   bins:
     essential:
       util-linux_block-devices:
@@ -20,9 +21,10 @@ slices:
       util-linux_pam-profiles:
       util-linux_process:
       util-linux_set-arch:
-      util-linux_su-support:
+      util-linux_services:
       util-linux_timer:
       util-linux_tty:
+      util-linux_su-support:
 
   block-devices:
     essential:
@@ -185,6 +187,7 @@ slices:
       /usr/bin/choom:
       /usr/bin/chrt:
       /usr/bin/ionice:
+      /usr/bin/logger:
       /usr/bin/prlimit:
       /usr/bin/setpriv:
       /usr/bin/setsid:
@@ -193,7 +196,7 @@ slices:
 
   services:
     essential:
-      util-linux_bins:
+      util-linux_file-system:
     contents:
       /usr/lib/systemd/system/fstrim.service:
       /usr/lib/systemd/system/fstrim.timer:

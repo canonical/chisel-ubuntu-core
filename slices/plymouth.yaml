@@ -3,8 +3,8 @@ package: plymouth
 slices:
   bins:
     essential:
-      - libc6_libs
-      - plymouth_services
+      libc6_libs:
+      plymouth_services:
     contents:
       /usr/bin/plymouth:
 
@@ -26,13 +26,13 @@ slices:
   theme:
     contents:
       /usr/share/plymouth/themes/details/details.plymouth:
-      /usr/share/plymouth/themes/spinner/watermark.png:
       /usr/share/plymouth/themes/text/text.plymouth:
       /usr/share/plymouth/themes/tribar/tribar.plymouth:
-      /usr/share/plymouth/ubuntu-logo.png:
       /usr/share/plymouth/plymouthd.defaults:
 
   init-d:
+    essential:
+      init-system-helpers_core:
     contents:
       /etc/init.d/plymouth:
       /etc/init.d/plymouth-log:
@@ -47,15 +47,15 @@ slices:
 
   services:
     essential:
-      - init-system-helpers_bins
-      - libdrm2_libs
-      - libplymouth5_libs
-      - plymouth_libs
-      - plymouth_config
-      - plymouth_theme
-      - systemd_services
-      - sysvinit-utils_bins
-      - udev_services
+      init-system-helpers_bins:
+      libdrm2_libs:
+      libplymouth5_libs:
+      plymouth_libs:
+      plymouth_config:
+      plymouth_theme:
+      systemd_services:
+      sysvinit-utils_bins:
+      udev_services:
     contents:
       /usr/lib/systemd/system/plymouth-halt.service:
       /usr/lib/systemd/system/plymouth-kexec.service:

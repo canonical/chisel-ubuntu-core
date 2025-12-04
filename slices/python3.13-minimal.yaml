@@ -17,6 +17,10 @@ slices:
       /usr/local/lib/python3.13/: {make: true, mode: 02775}
       /usr/local/lib/python3.13/dist-packages/: {make: true, mode: 02775}
 
+  binfmts:
+    contents:
+      /usr/share/binfmts/python3.13:
+
   copyright:
     contents:
       /usr/share/doc/python3.13-minimal/copyright:

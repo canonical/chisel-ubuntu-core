@@ -38,10 +38,7 @@ slices:
     contents:
       /etc/sudo.conf:
       /etc/sudo_logsrvd.conf:
-      /etc/sudoers.d/: {make: true, mode: 0750}
-      /etc/sudoers:
       /usr/lib/tmpfiles.d/sudo.conf:
-      /var/lib/sudo/: {make: true, mode: 0755}
 
   services:
     essential:

@@ -11,6 +11,7 @@ slices:
       libpython3.13-stdlib_core:
       media-types_data:
       python3.13-minimal_bins:
+      python3.13-minimal_binfmts:
 
   # The "standard" slice extends "core" with all the Python
   # modules from the libpython3.13-stdlib package.

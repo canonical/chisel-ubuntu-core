@@ -100,7 +100,7 @@ slices:
 #  Will be needed if tomcat10-admin is sliced
 #  ant:
 #    essential:
-#      - tomcat10-common_jars
+#      tomcat10-common_jars:
 #      tomcat10-common_jars:
 #      libtomcat10-java_ant:
 #    contents:

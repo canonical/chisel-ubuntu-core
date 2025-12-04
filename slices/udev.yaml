@@ -1,26 +1,26 @@
 package: udev
 
 essential:
-  - udev_copyright
+  udev_copyright:
 
 slices:
   bins:
     essential:
-      - libacl1_libs
-      - libblkid1_libs
-      - libc6_libs
-      - libcap2_libs
-      - libkmod2_libs
-      - libselinux1_libs
-      - libudev1_libs
-      - udev_config
-      - udev_rules
+      libacl1_libs:
+      libblkid1_libs:
+      libc6_libs:
+      libcap2_libs:
+      libkmod2_libs:
+      libselinux1_libs:
+      libudev1_libs:
+      udev_config:
+      udev_rules:
     contents:
       /usr/bin/udevadm:
 
   config:
     essential:
-      - udev_modprobe-config
+      udev_modprobe-config:
     contents:
       /etc/udev/iocost.conf:
       /etc/udev/udev.conf:
@@ -35,10 +35,10 @@ slices:
   # similar challenge is.
   generator:
     essential:
-      - libc6_libs
-      - libcap2_libs
-      - libselinux1_libs
-      - udev_hwdb
+      libc6_libs:
+      libcap2_libs:
+      libselinux1_libs:
+      udev_hwdb:
     contents:
       /etc/udev/: { make: true, mode: 0755 }
       /usr/bin/systemd-hwdb:
@@ -93,7 +93,7 @@ slices:
 
   rules:
     essential:
-      - udev_device-helpers
+      udev_device-helpers:
     contents:
       /etc/udev/rules.d/: { make: true, mode: 0755 }
       /usr/lib/udev/rules.d/40-vm-hotadd.rules:
@@ -106,9 +106,11 @@ slices:
       /usr/lib/udev/rules.d/60-drm.rules:
       /usr/lib/udev/rules.d/60-evdev.rules:
       /usr/lib/udev/rules.d/60-fido-id.rules:
+      /usr/lib/udev/rules.d/60-gpiochip.rules:
       /usr/lib/udev/rules.d/60-infiniband.rules:
       /usr/lib/udev/rules.d/60-input-id.rules:
       /usr/lib/udev/rules.d/60-persistent-alsa.rules:
+      /usr/lib/udev/rules.d/60-persistent-hidraw.rules:
       /usr/lib/udev/rules.d/60-persistent-input.rules:
       /usr/lib/udev/rules.d/60-persistent-storage-mtd.rules:
       /usr/lib/udev/rules.d/60-persistent-storage-tape.rules:
@@ -133,35 +135,40 @@ slices:
       /usr/lib/udev/rules.d/80-debian-compat.rules:
       /usr/lib/udev/rules.d/80-drivers.rules:
       /usr/lib/udev/rules.d/80-net-setup-link.rules:
+      /usr/lib/udev/rules.d/81-net-bridge.rules:
       /usr/lib/udev/rules.d/81-net-dhcp.rules:
+      /usr/lib/udev/rules.d/82-net-auto-link-local.rules:
+      /usr/lib/udev/rules.d/90-image-dissect.rules:
       /usr/lib/udev/rules.d/90-iocost.rules:
 
   services:
     essential:
-      - systemd-dev_dbus-interfaces
-      - systemd_services
-      - udev_bins
-      - udev_config
-      - udev_generator
-      - udev_rules
-      - udev_sysusers-config
-      - udev_tmpfiles-config
+      systemd-dev_dbus-interfaces:
+      systemd_services:
+      udev_bins:
+      udev_config:
+      udev_generator:
+      udev_rules:
+      udev_sysusers-config:
+      udev_tmpfiles-config:
     contents:
       /usr/lib/systemd/network/73-usb-net-by-mac.link:
       /usr/lib/systemd/network/99-default.link:
       /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-control.socket:
       /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-kernel.socket:
+      /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-varlink.socket:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-hwdb-update.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-udevd.service:
       /usr/lib/systemd/system/systemd-hwdb-update.service:
+      /usr/lib/systemd/system/systemd-udev-load-credentials.service:
       /usr/lib/systemd/system/systemd-udev-settle.service:
       /usr/lib/systemd/system/systemd-udev-trigger.service:
       /usr/lib/systemd/system/systemd-udevd-control.socket:
       /usr/lib/systemd/system/systemd-udevd-kernel.socket:
+      /usr/lib/systemd/system/systemd-udevd-varlink.socket:
       /usr/lib/systemd/system/systemd-udevd.service:
       /usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf:
-      /usr/lib/systemd/system/udev.service:
       /usr/lib/systemd/systemd-udevd:
 
   sysusers-config:
