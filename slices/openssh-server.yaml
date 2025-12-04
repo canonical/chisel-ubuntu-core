@@ -7,10 +7,10 @@ slices:
   # Standard installation - includes all components
   bins:
     essential:
-      - openssh-server_config
-      - openssh-server_daemon
-      - openssh-server_services
-      - openssh-server_utils
+      openssh-server_config:
+      openssh-server_daemon:
+      openssh-server_services:
+      openssh-server_utils:
 
   # Core SSH daemon and session handling
   daemon:
@@ -43,16 +43,16 @@ slices:
   # Helper utilities
   utils:
     essential:
-      - dash_bins
-      - procps_bins
+      dash_bins:
+      procps_bins:
     contents:
       /usr/lib/openssh/ssh-session-cleanup:
 
   # Configuration files
   config:
     essential:
-      - opensysusers_scripts
-      - openssh-server_utils
+      opensysusers_scripts:
+      openssh-server_utils:
     contents:
       /etc/default/ssh:
       /etc/init.d/ssh:
@@ -72,13 +72,13 @@ slices:
       openssh-server_daemon:
       systemd_bins:
     contents:
+      /usr/lib/systemd/system-generators/sshd-socket-generator:
       /usr/lib/systemd/system/rescue-ssh.target:
       /usr/lib/systemd/system/ssh.service:
       /usr/lib/systemd/system/ssh.socket:
       /usr/lib/systemd/system/sshd-keygen.service:
       /usr/lib/systemd/system/sshd.service:
       /usr/lib/systemd/system/sshd@.service:
-      /usr/lib/systemd/system-generators/sshd-socket-generator:
 
   copyright:
     essential:

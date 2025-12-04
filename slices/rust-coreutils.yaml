@@ -1,39 +1,566 @@
 package: rust-coreutils
 
 essential:
-  - rust-coreutils_copyright
+  rust-coreutils_copyright:
 
 slices:
-  bins:
+  coreutils:
     essential:
-      - libc6_libs
+      libc6_libs:
+      libselinux1_libs:
+      rust-coreutils_libs:
     contents:
-      /usr/bin/uu-basename:
-      /usr/bin/uu-cat:
-      /usr/bin/uu-chmod:
-      /usr/bin/uu-chown:
-      /usr/bin/uu-cp:
-      /usr/bin/uu-cut:
-      /usr/bin/uu-date:
-      /usr/bin/uu-dirname:
-      /usr/bin/uu-echo:
-      /usr/bin/uu-env:
-      /usr/bin/uu-head:
-      /usr/bin/uu-id:
-      /usr/bin/uu-ln:
-      /usr/bin/uu-ls:
-      /usr/bin/uu-mkdir:
-      /usr/bin/uu-mv:
-      /usr/bin/uu-pwd:
-      /usr/bin/uu-rm:
-      /usr/bin/uu-rmdir:
-      /usr/bin/uu-sleep:
-      /usr/bin/uu-sort:
-      /usr/bin/uu-tail:
-      /usr/bin/uu-touch:
-      /usr/bin/uu-tr:
-      /usr/bin/uu-true:
-      /usr/bin/uu-wc:
+      /usr/bin/coreutils:
+
+  # Output of entire files -- These commands read and write entire files,
+  # possibly transforming them in some way.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Output-of-entire-files.html
+  output-of-entire-files:
+    essential:
+      rust-coreutils_cat:
+      rust-coreutils_od-utility:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/base32:
+      /usr/lib/cargo/bin/coreutils/base64:
+      /usr/lib/cargo/bin/coreutils/basenc:
+      /usr/lib/cargo/bin/coreutils/nl:
+      /usr/lib/cargo/bin/coreutils/tac:
+
+  # Formatting file contents -- These commands reformat the contents of files.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Formatting-file-contents.html
+  formatting-file-contents:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/fmt:
+      /usr/lib/cargo/bin/coreutils/fold:
+      /usr/lib/cargo/bin/coreutils/pr:
+
+  # Output of parts of files -- These commands output pieces of the input.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Output-of-parts-of-files.html
+  output-of-parts-of-files:
+    essential:
+      rust-coreutils_head:
+      rust-coreutils_split:
+      rust-coreutils_tail:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/csplit:
+      /usr/lib/cargo/bin/coreutils/split:
+
+  # Summarizing files -- These commands generate just a few numbers representing
+  # entire contents of files.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Summarizing-files.html
+  summarizing-files:
+    essential:
+      rust-coreutils_coreutils:
+      libssl3t64_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/b2sum:
+      /usr/lib/cargo/bin/coreutils/cksum:
+      /usr/lib/cargo/bin/coreutils/hashsum:
+      /usr/lib/cargo/bin/coreutils/md5sum:
+      /usr/lib/cargo/bin/coreutils/sha1sum:
+      /usr/lib/cargo/bin/coreutils/sha224sum:
+      /usr/lib/cargo/bin/coreutils/sha256sum:
+      /usr/lib/cargo/bin/coreutils/sha384sum:
+      /usr/lib/cargo/bin/coreutils/sha512sum:
+      /usr/lib/cargo/bin/coreutils/sha3-224sum:
+      /usr/lib/cargo/bin/coreutils/sha3-256sum:
+      /usr/lib/cargo/bin/coreutils/sha3-384sum:
+      /usr/lib/cargo/bin/coreutils/sha3-512sum:
+      /usr/lib/cargo/bin/coreutils/sha3sum:
+      /usr/lib/cargo/bin/coreutils/shake128sum:
+      /usr/lib/cargo/bin/coreutils/shake256sum:
+      /usr/lib/cargo/bin/coreutils/sum:
+      /usr/lib/cargo/bin/coreutils/wc:
+
+  # Operating on sorted files -- These commands work with (or produce) sorted
+  # files.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Operating-on-sorted-files.html
+  operating-on-sorted-files:
+    essential:
+      rust-coreutils_sort:
+      rust-coreutils_coreutils:
+      libssl3t64_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/comm:
+      /usr/lib/cargo/bin/coreutils/ptx:
+      /usr/lib/cargo/bin/coreutils/shuf:
+      /usr/lib/cargo/bin/coreutils/sort:
+      /usr/lib/cargo/bin/coreutils/tsort:
+      /usr/lib/cargo/bin/coreutils/uniq:
+
+  # Operating on fields.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Operating-on-fields.html
+  operating-on-fields:
+    essential:
+      rust-coreutils_cut:
+      rust-coreutils_join:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/paste:
+
+  # Operating on characters -- These commands operate on individual characters.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Operating-on-characters.html
+  operating-on-characters:
+    essential:
+      rust-coreutils_tr-utility:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/expand:
+      /usr/lib/cargo/bin/coreutils/unexpand:
+
+  # Directory listing -- This slice contains the ls command and its variants dir
+  # and vdir, which list information about files.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Directory-listing.html
+  directory-listing:
+    essential:
+      rust-coreutils_dir:
+      rust-coreutils_ls-utility:
+      rust-coreutils_coreutils:
+      libcap2_libs:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/dircolors:
+      /usr/lib/cargo/bin/coreutils/vdir:
+
+  # Basic operations -- This slice contains the commands for basic file
+  # manipulation: copying, moving (renaming), and deleting (removing).
+  # https://www.gnu.org/software/coreutils/manual/html_node/Basic-operations.html
+  basic-operations:
+    essential:
+      rust-coreutils_dd-utility:
+      rust-coreutils_install:
+      rust-coreutils_mv-utility:
+      rust-coreutils_rm-utility:
+      libacl1_libs:
+      libattr1_libs:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/cp:
+      /usr/lib/cargo/bin/coreutils/shred:
+
+  # Special file types -- This slice contains commands which create special
+  # types of files (and rmdir, which removes directories, one special file
+  # type).
+  # https://www.gnu.org/software/coreutils/manual/html_node/Special-file-types.html
+  special-file-types:
+    essential:
+      rust-coreutils_link:
+      rust-coreutils_ln-utility:
+      rust-coreutils_mkdir:
+      rust-coreutils_readlink:
+      rust-coreutils_rmdir:
+      rust-coreutils_unlink:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/mkfifo:
+      /usr/lib/cargo/bin/coreutils/mknod:
+
+  # Changing file attributes -- These commands change file attributes.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Changing-file-attributes.html
+  changing-file-attributes:
+    essential:
+      rust-coreutils_chmod:
+      rust-coreutils_chown:
+      rust-coreutils_touch:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chgrp:
+
+  # File space usage -- These commands report how much storage is in use or
+  # available, report other file and file status information, and write buffers
+  # to file systems.
+  # https://www.gnu.org/software/coreutils/manual/html_node/File-space-usage.html
+  file-space-usage:
+    essential:
+      rust-coreutils_stat:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/df:
+      /usr/lib/cargo/bin/coreutils/du:
+      /usr/lib/cargo/bin/coreutils/sync:
+      /usr/lib/cargo/bin/coreutils/truncate:
+
+  # Printing text -- This slice contains commands that display text strings.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Printing-text.html
+  printing-text:
+    essential:
+      rust-coreutils_echo:
+      rust-coreutils_printf:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/yes:
+
+  # Conditions -- This slice contains commands that are primarily useful for
+  # their exit status, rather than their output. Thus, they are often used as
+  # the condition of shell if statements, or as the last command in a pipeline.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Conditions.html
+  conditions:
+    essential:
+      rust-coreutils_expr:
+      rust-coreutils_test:
+      rust-coreutils_coreutils:
+      libgmp10_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/false:
+      /usr/lib/cargo/bin/coreutils/true:
+
+  # Redirection -- This slice contains the tee command.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Redirection.html
+  redirection:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/tee:
+
+  # File name manipulation -- This slice contains commands that manipulate file
+  # names.
+  # https://www.gnu.org/software/coreutils/manual/html_node/File-name-manipulation.html
+  file-name-manipulation:
+    essential:
+      rust-coreutils_basename:
+      rust-coreutils_dirname:
+      rust-coreutils_mktemp:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/pathchk:
+      /usr/lib/cargo/bin/coreutils/realpath:
+      /usr/lib/cargo/bin/coreutils/relpath:
+
+  # Working context -- This slice contains commands that display or alter the
+  # context in which you are working: the current directory, the terminal
+  # settings, and so forth.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Working-context.html
+  working-context:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/printenv:
+      /usr/lib/cargo/bin/coreutils/pwd:
+      /usr/lib/cargo/bin/coreutils/stty:
+      /usr/lib/cargo/bin/coreutils/tty:
+
+  # User information -- This slice contains commands that print user-related
+  # information: logins, groups, and so forth.
+  # https://www.gnu.org/software/coreutils/manual/html_node/User-information.html
+  user-information:
+    essential:
+      rust-coreutils_id-utility:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+      libsystemd0_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/groups:
+      /usr/lib/cargo/bin/coreutils/logname:
+      /usr/lib/cargo/bin/coreutils/pinky:
+      /usr/lib/cargo/bin/coreutils/users:
+      /usr/lib/cargo/bin/coreutils/who:
+      /usr/lib/cargo/bin/coreutils/whoami:
+
+  # System context -- This slice contains commands that print or change
+  # system-wide information.
+  # https://www.gnu.org/software/coreutils/manual/html_node/System-context.html
+  system-context:
+    essential:
+      rust-coreutils_date:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/arch:
+      /usr/lib/cargo/bin/coreutils/hostid:
+      /usr/lib/cargo/bin/coreutils/nproc:
+      /usr/lib/cargo/bin/coreutils/uname:
+
+  # SELinux context -- This slice contains commands for operations with SELinux
+  # contexts.
+  # https://www.gnu.org/software/coreutils/manual/html_node/SELinux-context.html
+  selinux-context:
+    essential:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chcon:
+      /usr/lib/cargo/bin/coreutils/runcon:
+
+  # Modified command invocation -- This slice contains commands that run other
+  # commands in some context different than the current one: a modified
+  # environment, as a different user, etc.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Modified-command-invocation.html
+  modified-command-invocation:
+    essential:
+      rust-coreutils_libs:
+      rust-coreutils_timeout:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/env:
+      /usr/lib/cargo/bin/coreutils/nice:
+      /usr/lib/cargo/bin/coreutils/nohup:
+      /usr/lib/cargo/bin/coreutils/stdbuf:
+      /usr/lib/cargo/bin/coreutils/chroot:
+
+  # Delaying.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Delaying.html
+  delaying:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/sleep:
+
+  # Numeric operations -- These programs do numerically-related operations.
+  # https://www.gnu.org/software/coreutils/manual/html_node/Numeric-operations.html
+  numeric-operations:
+    essential:
+      rust-coreutils_coreutils:
+      libgmp10_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/factor:
+      /usr/lib/cargo/bin/coreutils/numfmt:
+      /usr/lib/cargo/bin/coreutils/seq:
+
+  # Single-binary slices
+
+  env:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/env:
+
+  expr:
+    essential:
+      rust-coreutils_coreutils:
+      libgmp10_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/expr:
+
+  mkdir:
+    essential:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/mkdir:
+
+  echo:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/echo:
+
+  # NOTE: slice names must have at least 3 characters, so we can't just call this `ln`
+  ln-utility:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/ln:
+
+  rm-utility:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/rm:
+
+  readlink:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/readlink:
+
+  sort:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/sort:
+
+  dirname:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/dirname:
+
+  touch:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/touch:
+
+  printf:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/printf:
+
+  basename:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/basename:
+
+  chmod:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chmod:
+
+  chown:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chown:
+
+  cut:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/cut:
+
+  date:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/date:
+
+  dd-utility:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/dd:
+
+  dir:
+    essential:
+      rust-coreutils_coreutils:
+      libcap2_libs:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/dir:
+
+  cat:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/cat:
+
+  ls-utility:
+    essential:
+      rust-coreutils_coreutils:
+      libcap2_libs:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/ls:
+
+  head:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/head:
+
+  install:
+    essential:
+      libacl1_libs:
+      libattr1_libs:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/install:
+
+  id-utility:
+    essential:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/id:
+
+  join:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/join:
+
+  link:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/link:
+
+  mktemp:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/mktemp:
+
+  mv-utility:
+    essential:
+      libacl1_libs:
+      libattr1_libs:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/mv:
+
+  od-utility:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/od:
+
+  rmdir:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/rmdir:
+
+  stat:
+    essential:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/stat:
+
+  split:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/split:
+
+  tail:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/tail:
+
+  test:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/[:
+      /usr/lib/cargo/bin/coreutils/test:
+
+  timeout:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/timeout:
+
+  tr-utility:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/tr:
+
+  unlink:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/unlink:
+
+  libs:
+    essential:
+      libc6_libs:
+    contents:
+      /usr/libexec/rust-coreutils/libstdbuf.so:
 
   copyright:
     contents:

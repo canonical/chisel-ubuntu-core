@@ -12,6 +12,8 @@ slices:
       libidn2-0_libs:
     contents:
       /usr/bin/ping:
+      /usr/bin/ping4: {symlink: /usr/bin/ping}
+      /usr/bin/ping6: {symlink: /usr/bin/ping}
 
   copyright:
     contents:

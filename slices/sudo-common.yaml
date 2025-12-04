@@ -9,7 +9,8 @@ slices:
       /etc/pam.d/sudo:
       /etc/pam.d/sudo-i:
       /etc/sudoers:
-      /etc/sudoers.d/:
+      /etc/sudoers.d/: {make: true, mode: 0750}
+      /var/lib/sudo/: {make: true, mode: 0755}
 
   copyright:
     contents:

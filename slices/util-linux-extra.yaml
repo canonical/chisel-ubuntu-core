@@ -4,7 +4,84 @@ essential:
   util-linux-extra_copyright:
 
 slices:
+  # Meta slice pulling in all the functional groups
   bins:
+    essential:
+      util-linux-extra_block-devices:
+      util-linux-extra_file-system:
+      util-linux-extra_hardware:
+      util-linux-extra_process:
+      util-linux-extra_login:
+      util-linux-extra_kernel:
+      util-linux-extra_tty:
+
+  # Extra block / partition tools
+  block-devices:
+    essential:
+      libblkid1_libs:
+      libc6_libs:
+      libselinux1_libs:
+      libsmartcols1_libs:
+    contents:
+      /usr/bin/addpart:
+      /usr/bin/delpart:
+      /usr/bin/resizepart:
+      /usr/bin/blkzone:
+      /usr/sbin/blkpr:
+
+  # Extra filesystem tools
+  file-system:
+    essential:
+      libblkid1_libs:
+      libc6_libs:
+      libselinux1_libs:
+      libsmartcols1_libs:
+      libuuid1_libs:
+      zlib1g_libs:
+    contents:
+      /usr/bin/isosize:
+      /usr/sbin/fsck.cramfs:
+      /usr/sbin/fsck.minix:
+      /usr/sbin/mkfs.bfs:
+      /usr/sbin/mkfs.cramfs:
+      /usr/sbin/mkfs.minix:
+
+  # Hardware / clock / watchdog, CPU and memory control
+  hardware:
+    essential:
+      libc6_libs:
+      libselinux1_libs:
+      libsmartcols1_libs:
+      libsystemd0_libs:
+    contents:
+      /usr/bin/chcpu:
+      /usr/bin/chmem:
+      /usr/bin/lsclocks:
+      /usr/bin/lsirq:
+      /usr/bin/lsmem:
+      /usr/bin/wdctl:
+      /usr/sbin/hwclock:
+
+  # Process / scheduling / fd-related helpers
+  process:
+    essential:
+      libc6_libs:
+      libselinux1_libs:
+      libsmartcols1_libs:
+      libsystemd0_libs:
+    contents:
+      /usr/bin/bits:
+      /usr/bin/coresched:
+      /usr/bin/exch:
+      /usr/bin/fadvise:
+      /usr/bin/fincore:
+      /usr/bin/lsfd:
+      /usr/bin/pipesz:
+      /usr/bin/sg:
+      /usr/bin/waitpid:
+
+  # Login / accounts related helpers
+  login:
     essential:
       libaudit1_libs:
       libc6_libs:
@@ -12,44 +89,35 @@ slices:
       liblastlog2-2_libs:
       libselinux1_libs:
       libsmartcols1_libs:
-      libsystemd0_libs:
-      zlib1g_libs:
     contents:
-      /usr/bin/addpart:
-      /usr/bin/bits:
-      /usr/bin/blkzone:
-      /usr/bin/chcpu:
-      /usr/bin/chmem:
-      /usr/bin/coresched:
-      /usr/bin/delpart:
-      /usr/bin/enosys:
-      /usr/bin/exch:
-      /usr/bin/fadvise:
-      /usr/bin/fincore:
-      /usr/bin/isosize:
-      /usr/bin/ldattach:
-      /usr/bin/lsclocks:
-      /usr/bin/lsfd:
-      /usr/bin/lsirq:
       /usr/bin/lslogins:
-      /usr/bin/lsmem:
       /usr/bin/newgrp:
-      /usr/bin/pipesz:
-      /usr/bin/pivot_root:
-      /usr/bin/rename.ul:
-      /usr/bin/resizepart:
-      /usr/bin/sg:
-      /usr/bin/switch_root:
-      /usr/bin/waitpid:
-      /usr/bin/wdctl:
-      /usr/sbin/blkpr:
       /usr/sbin/ctrlaltdel:
-      /usr/sbin/fsck.cramfs:
-      /usr/sbin/fsck.minix:
-      /usr/sbin/hwclock:
-      /usr/sbin/mkfs.bfs:
-      /usr/sbin/mkfs.cramfs:
-      /usr/sbin/mkfs.minix:
+
+  # Kernel / root switching / namespaces-ish
+  kernel:
+    essential:
+      libc6_libs:
+      libselinux1_libs:
+    contents:
+      /usr/bin/enosys:
+      /usr/bin/pivot_root:
+      /usr/bin/switch_root:
+
+  # TTY / serial helpers
+  tty:
+    essential:
+      libc6_libs:
+      libselinux1_libs:
+    contents:
+      /usr/bin/ldattach:
+
+  # Misc small utilities
+  misc:
+    essential:
+      libc6_libs:
+    contents:
+      /usr/bin/rename.ul:
 
   copyright:
     contents:

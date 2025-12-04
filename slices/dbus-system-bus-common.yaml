@@ -15,8 +15,8 @@ slices:
 
   services:
     essential:
-      - dbus-system-bus-common_config
-      - systemd_services
+      dbus-system-bus-common_config:
+      systemd_services:
     contents:
       /usr/lib/systemd/system/dbus.socket:
       /usr/lib/systemd/system/sockets.target.wants/dbus.socket:

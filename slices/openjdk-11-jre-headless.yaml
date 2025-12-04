@@ -7,7 +7,7 @@ slices:
 
   # A minimal set of files to run a Java application
   # excluded dependencies:
-  # - ca-certificates-java_essential - needs chisel support to run
+  # ca-certificates-java_essential - needs chisel support to run:
   #                                    maintainer scripts.
   # - java-common                    - provides update-alternatives,
   #                                    not relevant.

@@ -1,7 +1,7 @@
 package: systemd-bootchart
 
 essential:
-  - systemd-bootchart_copyright
+  systemd-bootchart_copyright:
 
 slices:
   config:
@@ -10,9 +10,9 @@ slices:
 
   services:
     essential:
-      - libc6_libs
-      - libsystemd0_libs
-      - systemd-bootchart_config
+      libc6_libs:
+      libsystemd0_libs:
+      systemd-bootchart_config:
     contents:
       /usr/lib/systemd/system/systemd-bootchart.service:
       /usr/lib/systemd/systemd-bootchart:

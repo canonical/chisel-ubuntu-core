@@ -1,7 +1,7 @@
 package: finalrd
 
 essential:
-  - finalrd_copyright
+  finalrd_copyright:
 
 slices:
   bins:
@@ -14,9 +14,9 @@ slices:
 
   services:
     essential:
-      - libc6_libs
-      - finalrd_bins
-      - finalrd_config
+      libc6_libs:
+      finalrd_bins:
+      finalrd_config:
     contents:
       /lib/systemd/system/finalrd.service:
 

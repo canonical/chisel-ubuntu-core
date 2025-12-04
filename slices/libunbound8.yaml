@@ -1,14 +1,14 @@
 package: libunbound8
 
 essential:
-  - libunbound8_copyright
+  libunbound8_copyright:
 
 slices:
   libs:
     essential:
-      - libc6_libs
-      - libevent-2.1-7t64_libs
-      - libssl3t64_libs
+      libc6_libs:
+      libevent-2.1-7t64_libs:
+      libssl3t64_libs:
     contents:
       /usr/lib/*-linux-*/libunbound.so.8*:
 

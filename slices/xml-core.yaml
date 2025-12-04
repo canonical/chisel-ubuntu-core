@@ -1,7 +1,7 @@
 package: xml-core
 
 essential:
-  - xml-core_copyright
+  xml-core_copyright:
 
 slices:
   # also contains some binary debian helpers, they are
@@ -14,7 +14,7 @@ slices:
   # we have taken care of in this slice by the mutation script.
   catalog:
     essential:
-      - sgml-base_catalog
+      sgml-base_catalog:
     contents:
       /etc/sgml/xml-core.cat:
       /etc/xml/catalog: {text: '', mutable: true}

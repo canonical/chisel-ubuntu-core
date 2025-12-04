@@ -3,9 +3,9 @@ package: kmod
 slices:
   bins:
     essential:
-      - libc6_libs
-      - libkmod2_libs
-      - libssl3t64_libs
+      libc6_libs:
+      libkmod2_libs:
+      libssl3t64_libs:
     contents:
       /usr/bin/kmod:
       /usr/bin/lsmod: {symlink: /usr/bin/kmod}

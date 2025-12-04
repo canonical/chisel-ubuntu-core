@@ -20,36 +20,36 @@ slices:
   # Password history management
   pwhistory:
     essential:
-      - libc6_libs
-      - libpam0g_libs
+      libc6_libs:
+      libpam0g_libs:
     contents:
       /usr/sbin/pwhistory_helper:
 
   # Account lockout management
   faillock:
     essential:
-      - libaudit1_libs
-      - libc6_libs
-      - libpam0g_libs
-      - libsystemd0_libs
+      libaudit1_libs:
+      libc6_libs:
+      libpam0g_libs:
+      libsystemd0_libs:
     contents:
       /usr/sbin/faillock:
 
   # Home directory creation
   mkhomedir:
     essential:
-      - libc6_libs
-      - libpam0g_libs
-      - libselinux1_libs
+      libc6_libs:
+      libpam0g_libs:
+      libselinux1_libs:
     contents:
       /usr/sbin/mkhomedir_helper:
 
   # Namespace isolation
   namespace:
     essential:
-      - libpam0g_libs
-      - libsystemd0_libs
-      - systemd_bins
+      libpam0g_libs:
+      libsystemd0_libs:
+      systemd_bins:
     contents:
       /usr/sbin/pam_namespace_helper:
       /usr/lib/systemd/system/pam_namespace.service:
@@ -57,17 +57,17 @@ slices:
   # Timestamp-based authentication
   timestamp:
     essential:
-      - libc6_libs
-      - libpam0g_libs
+      libc6_libs:
+      libpam0g_libs:
     contents:
       /usr/sbin/pam_timestamp_check:
 
   # Extra users support (non-standard user databases)
   extrausers:
     essential:
-      - libc6_libs
-      - libcrypt1_libs
-      - libpam0g_libs
+      libc6_libs:
+      libcrypt1_libs:
+      libpam0g_libs:
     contents:
       /usr/sbin/pam_extrausers_chkpwd:
       /usr/sbin/pam_extrausers_update:
@@ -75,10 +75,10 @@ slices:
   # Standard installation - includes commonly used helpers
   standard:
     essential:
-      - libpam-modules-bin_auth
-      - libpam-modules-bin_pwhistory
-      - libpam-modules-bin_faillock
-      - libpam-modules-bin_mkhomedir
+      libpam-modules-bin_auth:
+      libpam-modules-bin_pwhistory:
+      libpam-modules-bin_faillock:
+      libpam-modules-bin_mkhomedir:
 
   copyright:
     contents:

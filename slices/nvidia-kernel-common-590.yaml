@@ -1,0 +1,61 @@
+package: nvidia-kernel-common-590
+
+essential:
+  nvidia-kernel-common-590_copyright:
+
+slices:
+  bins:
+    essential:
+      libc6_libs:
+      libpciaccess0_libs:
+      nvidia-kernel-common-590_udev-rules:
+    contents:
+      /sbin/ub-device-create:
+
+  dbus-conf:
+    contents:
+      /usr/share/dbus-1/system.d/nvidia-dbus.conf:
+
+  modprobe-d:
+    contents:
+      /lib/modprobe.d/nvidia-graphics-drivers.conf:
+
+  modprobe-d-kms:
+    contents:
+      /etc/modprobe.d/nvidia-graphics-drivers-kms.conf:
+
+  powerd:
+    essential:
+      libc6_libs:
+      libpciaccess0_libs:
+      nvidia-firmware-590-590.48.01_libs:
+    contents:
+      /usr/bin/nvidia-powerd:
+
+  scripts:
+    contents:
+      /usr/bin/nvidia-sleep.sh:
+      /lib/systemd/system-sleep/nvidia:
+
+  udev-rules:
+    contents:
+      /lib/udev/rules.d/71-nvidia.rules:
+
+  services:
+    essential:
+      nvidia-kernel-common-590_bins:
+      nvidia-kernel-common-590_dbus-conf:
+      nvidia-kernel-common-590_modprobe-d:
+      nvidia-kernel-common-590_modprobe-d-kms:
+      nvidia-kernel-common-590_powerd:
+      nvidia-kernel-common-590_scripts:
+    contents:
+      /lib/systemd/system/nvidia-hibernate.service:
+      /lib/systemd/system/nvidia-powerd.service:
+      /lib/systemd/system/nvidia-resume.service:
+      /lib/systemd/system/nvidia-suspend-then-hibernate.service:
+      /lib/systemd/system/nvidia-suspend.service:
+
+  copyright:
+    contents:
+      /usr/share/doc/nvidia-kernel-common-590/copyright:

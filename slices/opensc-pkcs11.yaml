@@ -1,16 +1,16 @@
 package: opensc-pkcs11
 
 essential:
-  - opensc-pkcs11_copyright
+  opensc-pkcs11_copyright:
 
 slices:
   libs:
     essential:
-      - libc6_libs
-      - libeac3_libs
-      - libglib2.0-0t64_libs
-      - libssl3t64_libs
-      - zlib1g_libs
+      libc6_libs:
+      libeac3_libs:
+      libglib2.0-0t64_libs:
+      libssl3t64_libs:
+      zlib1g_libs:
     contents:
       /usr/lib/*-linux-*/libopensc.so.12*:
       /usr/lib/*-linux-*/libsmm-local.so.12*:

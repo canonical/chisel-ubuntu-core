@@ -1,12 +1,12 @@
 package: systemd-sysv
 
 essential:
-  - systemd-sysv_copyright
+  systemd-sysv_copyright:
 
 slices:
   bins:
     essential:
-      - systemd_bins
+      systemd_bins:
     contents:
       /usr/sbin/halt: {symlink: /usr/bin/systemctl}
       /usr/sbin/init: {symlink: /usr/lib/systemd/systemd}
