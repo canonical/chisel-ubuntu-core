@@ -1,0 +1,16 @@
+package: sudo-common
+
+essential:
+  - sudo-common_copyright
+
+slices:
+  data:
+    contents:
+      /etc/pam.d/sudo:
+      /etc/pam.d/sudo-i:
+      /etc/sudoers:
+      /etc/sudoers.d/: {make: true, mode: 0750}
+
+  copyright:
+    contents:
+      /usr/share/doc/sudo-common/copyright:

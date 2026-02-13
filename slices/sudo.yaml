@@ -33,13 +33,11 @@ slices:
       /usr/sbin/visudo.ws:
 
   config:
+    essential:
+      - sudo-common_data
     contents:
-      /etc/pam.d/sudo:
-      /etc/pam.d/sudo-i:
       /etc/sudo.conf:
       /etc/sudo_logsrvd.conf:
-      /etc/sudoers.d/: {make: true, mode: 0750}
-      /etc/sudoers:
       /usr/lib/tmpfiles.d/sudo.conf:
       /var/lib/sudo/: {make: true, mode: 0755}
 
