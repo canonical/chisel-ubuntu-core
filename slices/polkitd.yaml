@@ -15,8 +15,6 @@ slices:
       /usr/bin/pkttyagent:
 
   config:
-    essential:
-      - opensysusers_scripts
     contents:
       /usr/lib/sysusers.d/polkit.conf:
       /usr/lib/tmpfiles.d/polkit-tmpfiles.conf:
@@ -63,6 +61,8 @@ slices:
       - systemd_login
       - systemd_services
     contents:
+      /usr/lib/systemd/system/polkit-agent-helper.socket:
+      /usr/lib/systemd/system/polkit-agent-helper@.service:
       /usr/lib/systemd/system/polkit.service:
       /usr/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service:
       /usr/share/dbus-1/system.d/org.freedesktop.PolicyKit1.conf:

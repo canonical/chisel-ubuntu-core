@@ -13,6 +13,8 @@ slices:
     contents:
       /usr/lib/netplan/PLACEHOLDER:
       /usr/lib/systemd/system-generators/netplan:
+      /usr/lib/systemd/system/netplan-configure.service:
+      /usr/libexec/netplan/configure:
       /usr/libexec/netplan/generate:
 
   copyright:

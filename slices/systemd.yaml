@@ -172,12 +172,15 @@ slices:
       - systemd_polkit
       - systemd_system-services
     contents:
+      /etc/systemd/network/: {make: true, mode: 0755}
       /usr/bin/networkctl:
       /usr/lib/systemd/systemd-network-generator:
       /usr/lib/systemd/systemd-networkd:
       /usr/lib/systemd/systemd-networkd-wait-online:
       /usr/lib/systemd/system/systemd-network-generator.service:
       /usr/lib/systemd/system/systemd-networkd-persistent-storage.service:
+      /usr/lib/systemd/system/systemd-networkd-resolve-hook.socket:
+      /usr/lib/systemd/system/systemd-networkd-varlink.socket:
       /usr/lib/systemd/system/systemd-networkd-wait-online.service:
       /usr/lib/systemd/system/systemd-networkd-wait-online@.service:
       /usr/lib/systemd/system/systemd-networkd.service:
