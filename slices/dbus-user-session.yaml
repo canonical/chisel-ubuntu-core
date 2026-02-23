@@ -10,7 +10,7 @@ slices:
 
   services:
     essential:
-      - dbus-broker_user-services
+      - dbus_services
       - dbus-session-bus-common_config
       - libpam-systemd_libs
       - systemd_services
