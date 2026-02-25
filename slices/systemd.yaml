@@ -418,7 +418,6 @@ slices:
       /usr/lib/systemd/system/initrd.target.wants/systemd-bsod.service:
         arch: [amd64, arm64, riscv64, ppc64el, armhf, s390x]
       /usr/lib/systemd/system/initrd.target.wants/systemd-confext-initrd.service:
-      /usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:
       /usr/lib/systemd/system/initrd.target.wants/systemd-sysext-initrd.service:
       /usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:
         arch: [amd64, arm64, riscv64]
