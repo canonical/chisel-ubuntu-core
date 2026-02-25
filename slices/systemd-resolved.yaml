@@ -25,6 +25,11 @@ slices:
       /usr/lib/sysusers.d/systemd-resolve.conf:
       /usr/lib/tmpfiles.d/systemd-resolve.conf:
 
+  dbus:
+    contents:
+      /usr/share/dbus-1/system-services/org.freedesktop.resolve1.service:
+      /usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf:
+
   services:
     essential:
       - dbus_bins
@@ -32,11 +37,12 @@ slices:
       - libssl3t64_libs
       - libsystemd-shared_libs
       - systemd-resolved_config
+      - systemd-resolved_dbus
       - systemd_services
     contents:
+      /usr/lib/systemd/system/systemd-resolved-monitor.socket:
+      /usr/lib/systemd/system/systemd-resolved-varlink.socket:
       /usr/lib/systemd/system/systemd-resolved.service:
-      /usr/share/dbus-1/system-services/org.freedesktop.resolve1.service:
-      /usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf:
       /usr/lib/systemd/systemd-resolved:
 
   copyright:

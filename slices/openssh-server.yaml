@@ -70,13 +70,13 @@ slices:
       - openssh-server_daemon
       - systemd_bins
     contents:
+      /usr/lib/systemd/system-generators/sshd-socket-generator:
       /usr/lib/systemd/system/rescue-ssh.target:
       /usr/lib/systemd/system/ssh.service:
       /usr/lib/systemd/system/ssh.socket:
       /usr/lib/systemd/system/sshd-keygen.service:
       /usr/lib/systemd/system/sshd.service:
       /usr/lib/systemd/system/sshd@.service:
-      /usr/lib/systemd/system-generators/sshd-socket-generator:
 
   copyright:
     essential:

@@ -18,6 +18,7 @@ slices:
 
   libs:
     contents:
+      /usr/lib/nvpcr/cryptsetup.nvpcr:
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-fido2.so:
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-pkcs11.so:
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-tpm2.so:
@@ -29,17 +30,18 @@ slices:
       - libssl3t64_libs
       - libsystemd-shared_libs
       - systemd_services
-      - systemd_tpm2
       - systemd-cryptsetup_libs
       - systemd-cryptsetup_system-generators
     contents:
       /usr/lib/systemd/system/cryptsetup-pre.target:
       /usr/lib/systemd/system/cryptsetup.target:
       /usr/lib/systemd/system/initrd-root-device.target.wants/remote-cryptsetup.target:
+      /usr/lib/systemd/system/initrd-root-device.target.wants/remote-integritysetup.target:
       /usr/lib/systemd/system/initrd-root-device.target.wants/remote-veritysetup.target:
       /usr/lib/systemd/system/integritysetup-pre.target:
       /usr/lib/systemd/system/integritysetup.target:
       /usr/lib/systemd/system/remote-cryptsetup.target:
+      /usr/lib/systemd/system/remote-integritysetup.target:
       /usr/lib/systemd/system/remote-veritysetup.target:
       /usr/lib/systemd/system/sysinit.target.wants/cryptsetup.target:
       /usr/lib/systemd/system/sysinit.target.wants/integritysetup.target:
