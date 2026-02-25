@@ -635,7 +635,10 @@ slices:
       /usr/lib/systemd/user/shutdown.target:
       /usr/lib/systemd/user/smartcard.target:
       /usr/lib/systemd/user/sockets.target:
+      /usr/lib/systemd/user/sockets.target.wants/systemd-ask-password.socket:
       /usr/lib/systemd/user/sound.target:
+      /usr/lib/systemd/user/systemd-ask-password.socket:
+      /usr/lib/systemd/user/systemd-ask-password@.service:
       /usr/lib/systemd/user/systemd-exit.service:
       /usr/lib/systemd/user/systemd-tmpfiles-clean.service:
       /usr/lib/systemd/user/systemd-tmpfiles-clean.timer:
