@@ -19,9 +19,9 @@ slices:
   config:
     contents:
       /etc/systemd/resolved.conf:
+      /usr/lib/systemd/resolv.conf:
       /usr/lib/systemd/resolved.conf.d/00-disable-mdns.conf:
       /usr/lib/systemd/resolved.conf.d/cache-no-negative.conf:
-      /usr/lib/systemd/resolv.conf:
       /usr/lib/sysusers.d/systemd-resolve.conf:
       /usr/lib/tmpfiles.d/systemd-resolve.conf:
 

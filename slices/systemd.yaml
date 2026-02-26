@@ -7,32 +7,14 @@ slices:
   # Core systemd daemon
   core:
     essential:
-      - libacl1_libs
-      - libapparmor1_libs
       - libc6_libs
-      - liblzma5_libs
-      - libmount1_libs
-      - libpam0g_libs
-      - libseccomp2_libs
-      - libselinux1_libs
+      - libssl3t64_libs
       - libsystemd-shared_libs
       - libsystemd0_libs
       - mount_bins
       - systemd_catalog
       - systemd_config
       - systemd_system-generators
-    contents:
-      /usr/lib/systemd/systemd:
-      /usr/lib/systemd/systemd-executor:
-      /usr/lib/systemd/systemd-shutdown:
-
-  # Essential utilities
-  bins:
-    essential:
-      - libc6_libs
-      - libsystemd-shared_libs
-      - libsystemd0_libs
-      - systemd_core
     contents:
       /usr/bin/systemctl:
       /usr/bin/systemd-analyze:
@@ -41,6 +23,29 @@ slices:
       /usr/bin/systemd-run:
       /usr/bin/systemd-tmpfiles:
       /usr/bin/systemd-sysusers:
+      /usr/lib/systemd/systemd:
+      /usr/lib/systemd/systemd-executor:
+      /usr/lib/systemd/systemd-shutdown:
+
+  # Standard installation - includes core system components
+  standard:
+    essential:
+      - systemd_bins
+      - systemd_core
+      - systemd_dbus-services
+      - systemd_journal
+      - systemd_login
+      - systemd_hostname
+      - systemd_network
+      - systemd_locale
+      - systemd_services
+      - systemd_timedate
+      - systemd_utils
+
+  # Just a pointer to _core now
+  bins:
+    essential:
+      - systemd_core
 
   bash-completions:
     contents:
@@ -342,9 +347,14 @@ slices:
       /etc/xdg/systemd/user:
       /usr/lib/environment.d/99-environment.conf:
       /usr/lib/sysctl.d/10-coredump-debian.conf:
+      /usr/lib/systemd/initrd-preset/90-systemd.preset:
+      /usr/lib/systemd/initrd-preset/99-default.preset:
+      /usr/lib/systemd/ssh_config.d/20-systemd-ssh-proxy.conf:
+      /usr/lib/systemd/system-preset/90-systemd.preset:
       /usr/lib/systemd/journald.conf.d/syslog.conf:
       /usr/lib/systemd/system.conf.d/10-coredump-debian.conf:
       /usr/lib/systemd/user.conf.d/10-coredump-debian.conf:
+      /usr/lib/systemd/user-preset/90-systemd.preset:
       /var/log/journal/: {make: true}
 
   system-generators:
@@ -366,7 +376,6 @@ slices:
       - systemd_generated-services
     contents:
       /usr/lib/lsb/init-functions.d/40-systemd:
-      /usr/lib/systemd/system-preset/90-systemd.preset:
       /usr/lib/systemd/system/autovt@.service:
       /usr/lib/systemd/system/basic.target:
       /usr/lib/systemd/system/blockdev@.target:
@@ -619,7 +628,6 @@ slices:
     contents:
       /usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator:
       /usr/lib/systemd/user-generators/systemd-xdg-autostart-generator:
-      /usr/lib/systemd/user-preset/90-systemd.preset:
       /usr/lib/systemd/user/app.slice:
       /usr/lib/systemd/user/background.slice:
       /usr/lib/systemd/user/basic.target:
@@ -659,6 +667,7 @@ slices:
       /usr/share/dbus-1/system-services/org.freedesktop.timedate1.service:
       /usr/share/dbus-1/system.d/org.freedesktop.hostname1.conf:
       /usr/share/dbus-1/system.d/org.freedesktop.locale1.conf:
+      /usr/share/dbus-1/system.d/org.freedesktop.locale1.read-only.conf:
       /usr/share/dbus-1/system.d/org.freedesktop.login1.conf:
       /usr/share/dbus-1/system.d/org.freedesktop.network1.conf:
       /usr/share/dbus-1/system.d/org.freedesktop.systemd1.conf:
@@ -781,6 +790,7 @@ slices:
       /usr/share/polkit-1/actions/org.freedesktop.timedate1.policy:
       /usr/share/polkit-1/actions/org.freedesktop.timesync1.policy:
       /usr/share/polkit-1/rules.d/10-systemd-logind-root-ignore-inhibitors.rules:
+      /usr/share/polkit-1/rules.d/empower.rules:
       /usr/share/polkit-1/rules.d/systemd-networkd.rules:
 
   sysusers-config:
@@ -791,6 +801,7 @@ slices:
 
   tmpfiles-config:
     contents:
+      /usr/lib/tmpfiles.d/20-systemd-osc-context.conf:
       /usr/lib/tmpfiles.d/20-systemd-shell-extra.conf:
       /usr/lib/tmpfiles.d/20-systemd-ssh-generator.conf:
       /usr/lib/tmpfiles.d/20-systemd-stub.conf:
@@ -815,21 +826,6 @@ slices:
       /usr/lib/udev/rules.d/71-seat.rules:
       /usr/lib/udev/rules.d/73-seat-late.rules:
       /usr/lib/udev/rules.d/99-systemd.rules:
-
-  # Standard installation - includes core system components
-  standard:
-    essential:
-      - systemd_bins
-      - systemd_core
-      - systemd_dbus-services
-      - systemd_journal
-      - systemd_login
-      - systemd_hostname
-      - systemd_network
-      - systemd_locale
-      - systemd_services
-      - systemd_timedate
-      - systemd_utils
 
   copyright:
     contents:
