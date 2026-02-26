@@ -19,6 +19,8 @@ slices:
       /usr/bin/opensysusers-sysusers:
 
   init-d:
+    essential:
+      - init-system-helpers_core
     contents:
       /etc/init.d/opensysusers:
 

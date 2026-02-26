@@ -31,6 +31,8 @@ slices:
       /usr/share/plymouth/plymouthd.defaults:
 
   init-d:
+    essential:
+      - init-system-helpers_core
     contents:
       /etc/init.d/plymouth:
       /etc/init.d/plymouth-log:

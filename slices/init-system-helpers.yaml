@@ -4,16 +4,24 @@ essential:
   - init-system-helpers_copyright
 
 slices:
-  bins:
+  core:
     essential:
       - init-system-helpers_config
       - init-system-helpers_var
     contents:
-      /usr/bin/deb-systemd-helper:
-      /usr/bin/deb-systemd-invoke:
       /usr/sbin/invoke-rc.d:
       /usr/sbin/service:
       /usr/sbin/update-rc.d:
+
+  # just a pointer to core now
+  bins:
+    essential:
+      - init-system-helpers_core
+
+  no-systemd:
+    contents:
+      /usr/bin/deb-systemd-helper:
+      /usr/bin/deb-systemd-invoke:
 
   config:
     contents:

@@ -44,6 +44,8 @@ slices:
       /usr/lib/cryptsetup/scripts/passdev:
 
   init-d:
+    essential:
+      - init-system-helpers_core
     contents:
       /etc/init.d/cryptdisks:
       /etc/init.d/cryptdisks-early:

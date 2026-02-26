@@ -15,15 +15,12 @@ slices:
     contents:
       /usr/lib/dbus-*/dbus-daemon-launch-helper:
 
-  config:
-    contents:
-      /etc/default/dbus:
-
   init-d:
     essential:
-      - dbus_config
+      - init-system-helpers_core
     contents:
       /etc/init.d/dbus:
+      /etc/default/dbus:
 
   services:
     essential:
