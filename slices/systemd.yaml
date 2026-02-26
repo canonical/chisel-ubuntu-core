@@ -308,6 +308,8 @@ slices:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/systemd-tpm2-setup:
         arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/systemd-tpm2-clear:
+        arch: [amd64, arm64, riscv64]
 
   catalog:
     contents:
