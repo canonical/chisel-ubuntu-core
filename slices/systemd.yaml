@@ -346,12 +346,15 @@ slices:
       /etc/systemd/user.conf:
       /etc/xdg/systemd/user:
       /usr/lib/environment.d/99-environment.conf:
+      /usr/lib/nvpcr/hardware.nvpcr:
       /usr/lib/sysctl.d/10-coredump-debian.conf:
       /usr/lib/systemd/initrd-preset/90-systemd.preset:
       /usr/lib/systemd/initrd-preset/99-default.preset:
+      /usr/lib/systemd/journald.conf.d/syslog.conf:
+      /usr/lib/systemd/profile.d/70-systemd-shell-extra.sh:
+      /usr/lib/systemd/profile.d/80-systemd-osc-context.sh:
       /usr/lib/systemd/ssh_config.d/20-systemd-ssh-proxy.conf:
       /usr/lib/systemd/system-preset/90-systemd.preset:
-      /usr/lib/systemd/journald.conf.d/syslog.conf:
       /usr/lib/systemd/system.conf.d/10-coredump-debian.conf:
       /usr/lib/systemd/user.conf.d/10-coredump-debian.conf:
       /usr/lib/systemd/user-preset/90-systemd.preset:
