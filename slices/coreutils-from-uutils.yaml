@@ -503,6 +503,12 @@ slices:
     contents:
       /usr/bin/ls: { symlink: ../lib/cargo/bin/coreutils/ls }
 
+  wc-utility:
+    esential:
+      rust-coreutils_wc-utility:
+    contents:
+      /usr/bin/wc: { symlink: ../lib/cargo/bin/coreutils/wc }
+
   copyright:
     contents:
       /usr/share/doc/coreutils-from-uutils/copyright:
