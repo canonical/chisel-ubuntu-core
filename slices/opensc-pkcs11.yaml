@@ -12,8 +12,8 @@ slices:
       libssl3t64_libs:
       zlib1g_libs:
     contents:
-      /usr/lib/*-linux-*/libopensc.so.12*:
-      /usr/lib/*-linux-*/libsmm-local.so.12*:
+      /usr/lib/*-linux-*/libopensc.so.13*:
+      /usr/lib/*-linux-*/libsmm-local.so.13*:
       /usr/lib/*-linux-*/onepin-opensc-pkcs11.so:
       /usr/lib/*-linux-*/opensc-pkcs11.so:
       /usr/lib/*-linux-*/pkcs11-spy.so:
