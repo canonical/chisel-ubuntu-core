@@ -6,7 +6,6 @@ essential:
 slices:
   data:
     contents:
-      /usr/share/X11/xkb/compat/README:
       /usr/share/X11/xkb/compat/accessx:
       /usr/share/X11/xkb/compat/basic:
       /usr/share/X11/xkb/compat/caps:
