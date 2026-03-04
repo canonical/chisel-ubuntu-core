@@ -19,6 +19,7 @@ slices:
   libs:
     contents:
       /usr/lib/nvpcr/cryptsetup.nvpcr:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-fido2.so:
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-pkcs11.so:
       /usr/lib/*-linux-*/cryptsetup/libcryptsetup-token-systemd-tpm2.so:
