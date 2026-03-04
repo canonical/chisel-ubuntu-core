@@ -16,7 +16,7 @@ slices:
   libs:
     contents:
       /usr/lib/libinproctrace.so:
-        arch: [amd64, i386, arm64, ppc64el, riscv64, s390x]
+        arch: [amd64, i386, arm64, ppc64el, s390x]
 
   copyright:
     contents:
