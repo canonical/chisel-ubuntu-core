@@ -349,6 +349,7 @@ slices:
       /etc/xdg/systemd/user:
       /usr/lib/environment.d/99-environment.conf:
       /usr/lib/nvpcr/hardware.nvpcr:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/sysctl.d/10-coredump-debian.conf:
       /usr/lib/systemd/initrd-preset/90-systemd.preset:
       /usr/lib/systemd/initrd-preset/99-default.preset:
@@ -405,6 +406,7 @@ slices:
       /usr/lib/systemd/system/factory-reset.target:
       /usr/lib/systemd/system/factory-reset.target.wants/systemd-factory-reset-request.service:
       /usr/lib/systemd/system/factory-reset.target.wants/systemd-pcrphase-factory-reset.service:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/final.target:
       /usr/lib/systemd/system/first-boot-complete.target:
       /usr/lib/systemd/system/getty-pre.target:
@@ -434,8 +436,6 @@ slices:
         arch: [amd64, arm64, riscv64, ppc64el, armhf, s390x]
       /usr/lib/systemd/system/initrd.target.wants/systemd-confext-initrd.service:
       /usr/lib/systemd/system/initrd.target.wants/systemd-sysext-initrd.service:
-      /usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:
-        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/kexec.target:
       /usr/lib/systemd/system/kmod-static-nodes.service:
       /usr/lib/systemd/system/kmod.service:
@@ -486,10 +486,6 @@ slices:
       /usr/lib/systemd/system/sockets.target.wants/systemd-journald.socket:
       /usr/lib/systemd/system/sockets.target.wants/systemd-logind-varlink.socket:
       /usr/lib/systemd/system/sockets.target.wants/systemd-mute-console.socket:
-      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrextend.socket:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrlock.socket:
-        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/sockets.target.wants/systemd-sysext.socket:
       /usr/lib/systemd/system/soft-reboot.target:
       /usr/lib/systemd/system/sound.target:
@@ -521,12 +517,6 @@ slices:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-journald.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-machine-id-commit.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-modules-load.service:
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrmachine.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase.service:
-        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/sysinit.target.wants/systemd-random-seed.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-sysctl.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-sysusers.service:
@@ -751,6 +741,8 @@ slices:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrextend@.service:
         arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrextend.socket:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs-root.service:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs@.service:
@@ -773,13 +765,23 @@ slices:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrlock@.service:
         arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrlock.socket:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrmachine.service:
+        arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrmachine.service:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase-initrd.service:
         arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase-sysinit.service:
         arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:
+        arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase.service:
+        arch: [amd64, arm64, riscv64]
+      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase.service:
         arch: [amd64, arm64, riscv64]
       /var/lib/pcrlock.d/:
         arch: [amd64, arm64, riscv64]
