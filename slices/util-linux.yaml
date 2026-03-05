@@ -15,6 +15,7 @@ slices:
       util-linux_generated:
       util-linux_ipc:
       util-linux_kernel:
+      util-linux_lock:
       util-linux_login:
       util-linux_mcookie:
       util-linux_namespace:
