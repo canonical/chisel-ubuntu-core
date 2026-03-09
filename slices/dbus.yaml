@@ -14,7 +14,7 @@ slices:
       libexpat1_libs:
       libsystemd0_libs:
     contents:
-      /usr/lib/dbus-*/dbus-daemon-launch-helper:
+      /usr/lib/dbus-*/dbus-daemon-launch-helper: {mode: 4755}
 
   init-d:
     essential:
