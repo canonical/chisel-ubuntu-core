@@ -451,6 +451,12 @@ slices:
     contents:
       /usr/lib/cargo/bin/coreutils/ls:
 
+  uname:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/uname:
+
   head:
     essential:
       rust-coreutils_coreutils:
@@ -499,6 +505,15 @@ slices:
       libselinux1_libs:
     contents:
       /usr/lib/cargo/bin/coreutils/mv:
+
+  cp-utility:
+    essential:
+      libacl1_libs:
+      libattr1_libs:
+      rust-coreutils_coreutils:
+      libselinux1_libs:
+    contents:
+      /usr/lib/cargo/bin/coreutils/cp:
 
   od-utility:
     essential:
@@ -551,10 +566,40 @@ slices:
       /usr/lib/cargo/bin/coreutils/tr:
 
   unlink:
-    essential:
+    esential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/unlink:
+
+  wc-utility:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/wc:
+
+  chgrp:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chgrp:
+
+  realpath:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/realpath:
+
+  sync:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/sync:
+
+  sleep:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/sleep:
 
   libs:
     essential:

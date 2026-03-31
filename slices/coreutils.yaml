@@ -255,15 +255,15 @@ slices:
 
   uname:
     essential:
-      coreutils-from-gnu_uname:
+      coreutils-from-uutils_uname:
 
   sleep:
     essential:
-      coreutils-from-gnu_sleep:
+      coreutils-from-uutils_sleep:
 
   cp-utility:
     essential:
-      coreutils-from-gnu_cp-utility:
+      coreutils-from-uutils_cp-utility:
 
   wc-utility:
     essential:
@@ -271,15 +271,15 @@ slices:
 
   chgrp:
     essential:
-      coreutils-from-gnu_chgrp:
+      coreutils-from-uutils_chgrp:
 
   realpath:
     essential:
-      coreutils-from-gnu_realpath:
+      coreutils-from-uutils_realpath:
 
   sync:
     essential:
-      coreutils-from-gnu_sync:
+      coreutils-from-uutils_sync:
 
   copyright:
     contents:

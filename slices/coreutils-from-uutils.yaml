@@ -436,6 +436,12 @@ slices:
     contents:
       /usr/bin/mv: { symlink: ../lib/cargo/bin/coreutils/mv }
 
+  cp-utility:
+    esential:
+      rust-coreutils_cp-utility:
+    contents:
+      /usr/bin/cp: { symlink: ../lib/cargo/bin/coreutils/cp }
+
   od-utility:
     esential:
       rust-coreutils_od-utility:
@@ -459,6 +465,12 @@ slices:
       rust-coreutils_split:
     contents:
       /usr/bin/split: { symlink: ../lib/cargo/bin/coreutils/split }
+  
+  sleep:
+    esential:
+      rust-coreutils_sleep:
+    contents:
+      /usr/bin/sleep: { symlink: ../lib/cargo/bin/coreutils/sleep }
 
   tail:
     esential:
@@ -503,11 +515,35 @@ slices:
     contents:
       /usr/bin/ls: { symlink: ../lib/cargo/bin/coreutils/ls }
 
+  uname:
+    esential:
+      rust-coreutils_uname:
+    contents:
+      /usr/bin/uname: { symlink: ../lib/cargo/bin/coreutils/uname }
+
   wc-utility:
     esential:
       rust-coreutils_wc-utility:
     contents:
       /usr/bin/wc: { symlink: ../lib/cargo/bin/coreutils/wc }
+
+  chgrp:
+    esential:
+      rust-coreutils_chgrp:
+    contents:
+      /usr/bin/chgrp: { symlink: ../lib/cargo/bin/coreutils/chgrp }
+
+  realpath:
+    esential:
+      rust-coreutils_realpath:
+    contents:
+      /usr/bin/realpath: { symlink: ../lib/cargo/bin/coreutils/realpath }
+
+  sync:
+    esential:
+      rust-coreutils_sync:
+    contents:
+      /usr/bin/sync: { symlink: ../lib/cargo/bin/coreutils/sync }
 
   copyright:
     contents:
