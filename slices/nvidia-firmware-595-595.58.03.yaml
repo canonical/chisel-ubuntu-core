@@ -1,0 +1,14 @@
+package: nvidia-firmware-595-595.58.03
+
+essential:
+  nvidia-firmware-595-595.58.03_copyright:
+
+slices:
+  libs:
+    contents:
+    /lib/firmware/nvidia/595.58.03/gsp_ga10x.bin:
+    /lib/firmware/nvidia/595.58.03/gsp_tu10x.bin:
+
+  copyright:
+    contents:
+      /usr/share/doc/nvidia-firmware-595-595.58.03/copyright:

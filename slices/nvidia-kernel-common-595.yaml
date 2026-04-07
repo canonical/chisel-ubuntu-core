@@ -1,14 +1,14 @@
-package: nvidia-kernel-common-590
+package: nvidia-kernel-common-595
 
 essential:
-  nvidia-kernel-common-590_copyright:
+  nvidia-kernel-common-595_copyright:
 
 slices:
   bins:
     essential:
       libc6_libs:
       libpciaccess0_libs:
-      nvidia-kernel-common-590_udev-rules:
+      nvidia-kernel-common-595_udev-rules:
     contents:
       /sbin/ub-device-create:
 
@@ -28,7 +28,7 @@ slices:
     essential:
       libc6_libs:
       libpciaccess0_libs:
-      nvidia-firmware-590-590.48.01_libs:
+      nvidia-firmware-595-595.58.03_libs:
     contents:
       /usr/bin/nvidia-powerd:
 
@@ -43,12 +43,12 @@ slices:
 
   services:
     essential:
-      nvidia-kernel-common-590_bins:
-      nvidia-kernel-common-590_dbus-conf:
-      nvidia-kernel-common-590_modprobe-d:
-      nvidia-kernel-common-590_modprobe-d-kms:
-      nvidia-kernel-common-590_powerd:
-      nvidia-kernel-common-590_scripts:
+      nvidia-kernel-common-595_bins:
+      nvidia-kernel-common-595_dbus-conf:
+      nvidia-kernel-common-595_modprobe-d:
+      nvidia-kernel-common-595_modprobe-d-kms:
+      nvidia-kernel-common-595_powerd:
+      nvidia-kernel-common-595_scripts:
     contents:
       /lib/systemd/system/nvidia-hibernate.service:
       /lib/systemd/system/nvidia-powerd.service:
@@ -58,4 +58,4 @@ slices:
 
   copyright:
     contents:
-      /usr/share/doc/nvidia-kernel-common-590/copyright:
+      /usr/share/doc/nvidia-kernel-common-595/copyright:
