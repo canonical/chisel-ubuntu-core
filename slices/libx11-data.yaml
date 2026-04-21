@@ -7,6 +7,9 @@ slices:
   data:
     essential:
       libx11-data_locale:
+      libx11-data_xerrordb:
+
+  xerrordb:
     contents:
       /usr/share/X11/XErrorDB:
 
