@@ -297,11 +297,11 @@ slices:
       rust-coreutils_timeout:
       rust-coreutils_coreutils:
     contents:
+      /usr/lib/cargo/bin/coreutils/chroot:
       /usr/lib/cargo/bin/coreutils/env:
       /usr/lib/cargo/bin/coreutils/nice:
       /usr/lib/cargo/bin/coreutils/nohup:
       /usr/lib/cargo/bin/coreutils/stdbuf:
-      /usr/lib/cargo/bin/coreutils/chroot:
 
   # Delaying.
   # https://www.gnu.org/software/coreutils/manual/html_node/Delaying.html
@@ -410,6 +410,12 @@ slices:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/chown:
+
+  chroot:
+    essential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/chroot:
 
   cut:
     essential:

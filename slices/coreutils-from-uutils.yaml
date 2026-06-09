@@ -262,6 +262,7 @@ slices:
     essential:
       rust-coreutils_modified-command-invocation:
     contents:
+      /usr/bin/chroot: { symlink: ../lib/cargo/bin/coreutils/chroot }
       /usr/bin/env:    { symlink: ../lib/cargo/bin/coreutils/env }
       /usr/bin/nice:   { symlink: ../lib/cargo/bin/coreutils/nice }
       /usr/bin/nohup:  { symlink: ../lib/cargo/bin/coreutils/nohup }
@@ -369,6 +370,12 @@ slices:
       rust-coreutils_chown:
     contents:
       /usr/bin/chown: { symlink: ../lib/cargo/bin/coreutils/chown }
+
+  chroot:
+    esential:
+      rust-coreutils_chroot:
+    contents:
+      /usr/bin/chroot: { symlink: ../lib/cargo/bin/coreutils/chroot }
 
   cut:
     esential:

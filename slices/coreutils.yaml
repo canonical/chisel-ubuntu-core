@@ -165,6 +165,10 @@ slices:
     essential:
       coreutils-from-uutils_chown:
 
+  chroot:
+    essential:
+      coreutils-from-uutils_chroot:
+
   cut:
     essential:
       coreutils-from-uutils_cut:
