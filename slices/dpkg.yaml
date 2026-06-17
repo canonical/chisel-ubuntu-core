@@ -36,7 +36,7 @@ slices:
       /usr/libexec/dpkg/*:
 
   start-stop-daemon:
-    hint: Start and stop system demon programs
+    hint: Start and stop system daemon programs
     essential:
       libc6_libs:
     contents:

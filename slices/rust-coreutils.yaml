@@ -566,43 +566,43 @@ slices:
       /usr/lib/cargo/bin/coreutils/tr:
 
   unlink:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/unlink:
 
   wc-utility:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/wc:
 
   chgrp:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/chgrp:
 
   realpath:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/realpath:
 
   sync:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/sync:
 
   sleep:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/sleep:
 
   whoami:
-    esential:
+    essential:
       rust-coreutils_coreutils:
     contents:
       /usr/lib/cargo/bin/coreutils/whoami:
