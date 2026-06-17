@@ -601,6 +601,12 @@ slices:
     contents:
       /usr/lib/cargo/bin/coreutils/sleep:
 
+  whoami:
+    esential:
+      rust-coreutils_coreutils:
+    contents:
+      /usr/lib/cargo/bin/coreutils/whoami:
+
   libs:
     essential:
       libc6_libs:

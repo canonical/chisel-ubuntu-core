@@ -545,6 +545,12 @@ slices:
     contents:
       /usr/bin/sync: { symlink: ../lib/cargo/bin/coreutils/sync }
 
+  whoami:
+    esential:
+      rust-coreutils_whoami:
+    contents:
+      /usr/bin/whoami: { symlink: ../lib/cargo/bin/coreutils/whoami }
+
   copyright:
     contents:
       /usr/share/doc/coreutils-from-uutils/copyright:
