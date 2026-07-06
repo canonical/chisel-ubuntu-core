@@ -4,6 +4,13 @@ essential:
   init-system-helpers_copyright:
 
 slices:
+  core:
+    essential:
+      init-system-helpers_config:
+      init-system-helpers_var:
+      init-system-helpers_invoke-rc-d:
+      init-system-helpers_service:
+
   scripts:
     essential:
       init-system-helpers_deb-systemd-helper:
@@ -68,14 +75,6 @@ slices:
       perl-base_bins:
       perl-base_modules:
       systemd_standard:
-    contents:
-      /usr/sbin/update-rc.d:
-
-  # just a pointer to core now
-  bins:
-    essential:
-      init-system-helpers_config:
-      init-system-helpers_var:
     contents:
       /usr/sbin/update-rc.d:
 
