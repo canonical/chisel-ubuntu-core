@@ -432,8 +432,6 @@ slices:
       /usr/lib/systemd/system/imports-pre.target:
       /usr/lib/systemd/system/imports.target:
       /usr/lib/systemd/system/hybrid-sleep.target:
-      /usr/lib/systemd/system/imports-pre.target:
-      /usr/lib/systemd/system/imports.target:
       /usr/lib/systemd/system/initrd-cleanup.service:
       /usr/lib/systemd/system/initrd-fs.target:
       /usr/lib/systemd/system/initrd-parse-etc.service:
@@ -779,9 +777,9 @@ slices:
       /usr/lib/systemd/system/systemd-pcrextend.socket:
         arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrextend@.service:
-        arch: [amd64, arm64, riscv64]
+        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/sockets.target.wants/systemd-pcrextend.socket:
-        arch: [amd64, arm64, riscv64]
+        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs-root.service:
         arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs@.service:
@@ -803,28 +801,13 @@ slices:
       /usr/lib/systemd/system/systemd-pcrlock.socket:
         arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrlock@.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrlock.socket:
-        arch: [amd64, arm64, riscv64]
+        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrmachine.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrmachine.service:
-        arch: [amd64, arm64, riscv64]
+        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase-initrd.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:
-        arch: [amd64, arm64, riscv64]
+        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase-sysinit.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/systemd-pcrphase.service:
-        arch: [amd64, arm64, riscv64]
-      /usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase.service:
-        arch: [amd64, arm64, riscv64]
-      /var/lib/pcrlock.d/:
-        arch: [amd64, arm64, riscv64]
-        make: true
+        arch: [amd64, arm64, armhf, riscv64]
 
   polkit:
     contents:
