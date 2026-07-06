@@ -778,8 +778,6 @@ slices:
         arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrextend@.service:
         arch: [amd64, arm64, armhf, riscv64]
-      /usr/lib/systemd/system/sockets.target.wants/systemd-pcrextend.socket:
-        arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs-root.service:
         arch: [amd64, arm64, armhf, riscv64]
       /usr/lib/systemd/system/systemd-pcrfs@.service:
