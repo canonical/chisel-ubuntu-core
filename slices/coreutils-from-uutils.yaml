@@ -288,85 +288,85 @@ slices:
   # Single-binary slices (mirroring coreutils-from-gnu)
 
   env:
-    esential:
+    essential:
       rust-coreutils_env:
     contents:
       /usr/bin/env: { symlink: ../lib/cargo/bin/coreutils/env }
 
   expr:
-    esential:
+    essential:
       rust-coreutils_expr:
     contents:
       /usr/bin/expr: { symlink: ../lib/cargo/bin/coreutils/expr }
 
   mkdir:
-    esential:
+    essential:
       rust-coreutils_mkdir:
     contents:
       /usr/bin/mkdir: { symlink: ../lib/cargo/bin/coreutils/mkdir }
 
   echo:
-    esential:
+    essential:
       rust-coreutils_echo:
     contents:
       /usr/bin/echo: { symlink: ../lib/cargo/bin/coreutils/echo }
 
   ln-utility:
-    esential:
+    essential:
       rust-coreutils_ln-utility:
     contents:
       /usr/bin/ln: { symlink: ../lib/cargo/bin/coreutils/ln }
 
   rm-utility:
-    esential:
+    essential:
       rust-coreutils_rm-utility:
     contents:
       /usr/bin/rm: { symlink: ../lib/cargo/bin/coreutils/rm }
 
   readlink:
-    esential:
+    essential:
       rust-coreutils_readlink:
     contents:
       /usr/bin/readlink: { symlink: ../lib/cargo/bin/coreutils/readlink }
 
   sort:
-    esential:
+    essential:
       rust-coreutils_sort:
     contents:
       /usr/bin/sort: { symlink: ../lib/cargo/bin/coreutils/sort }
 
   dirname:
-    esential:
+    essential:
       rust-coreutils_dirname:
     contents:
       /usr/bin/dirname: { symlink: ../lib/cargo/bin/coreutils/dirname }
 
   touch:
-    esential:
+    essential:
       rust-coreutils_touch:
     contents:
       /usr/bin/touch: { symlink: ../lib/cargo/bin/coreutils/touch }
 
   printf:
-    esential:
+    essential:
       rust-coreutils_printf:
     contents:
       /usr/bin/printf: { symlink: ../lib/cargo/bin/coreutils/printf }
 
   basename:
-    esential:
+    essential:
       rust-coreutils_basename:
     contents:
       /usr/bin/basename: { symlink: ../lib/cargo/bin/coreutils/basename }
 
   chmod:
-    esential:
+    essential:
       rust-coreutils_chmod:
     contents:
       /usr/bin/chmod: { symlink: ../lib/cargo/bin/coreutils/chmod }
 
   chown:
-    esential:
+    essential:
       rust-coreutils_chown:
     contents:
       /usr/bin/chown: { symlink: ../lib/cargo/bin/coreutils/chown }
@@ -378,179 +378,185 @@ slices:
       /usr/bin/chroot: { symlink: ../lib/cargo/bin/coreutils/chroot }
 
   cut:
-    esential:
+    essential:
       rust-coreutils_cut:
     contents:
       /usr/bin/cut: { symlink: ../lib/cargo/bin/coreutils/cut }
 
   date:
-    esential:
+    essential:
       rust-coreutils_date:
     contents:
       /usr/bin/date: { symlink: ../lib/cargo/bin/coreutils/date }
 
   dd-utility:
-    esential:
+    essential:
       rust-coreutils_dd-utility:
     contents:
       /usr/bin/dd: { symlink: ../lib/cargo/bin/coreutils/dd }
 
   dir:
-    esential:
+    essential:
       rust-coreutils_dir:
     contents:
       /usr/bin/dir: { symlink: ../lib/cargo/bin/coreutils/dir }
 
   head:
-    esential:
+    essential:
       rust-coreutils_head:
     contents:
       /usr/bin/head: { symlink: ../lib/cargo/bin/coreutils/head }
 
   install:
-    esential:
+    essential:
       rust-coreutils_install:
     contents:
       /usr/bin/install: { symlink: ../lib/cargo/bin/coreutils/install }
 
   id-utility:
-    esential:
+    essential:
       rust-coreutils_id-utility:
     contents:
       /usr/bin/id: { symlink: ../lib/cargo/bin/coreutils/id }
 
   join:
-    esential:
+    essential:
       rust-coreutils_join:
     contents:
       /usr/bin/join: { symlink: ../lib/cargo/bin/coreutils/join }
 
   link:
-    esential:
+    essential:
       rust-coreutils_link:
     contents:
       /usr/bin/link: { symlink: ../lib/cargo/bin/coreutils/link }
 
   mktemp:
-    esential:
+    essential:
       rust-coreutils_mktemp:
     contents:
       /usr/bin/mktemp: { symlink: ../lib/cargo/bin/coreutils/mktemp }
 
   mv-utility:
-    esential:
+    essential:
       rust-coreutils_mv-utility:
     contents:
       /usr/bin/mv: { symlink: ../lib/cargo/bin/coreutils/mv }
 
   cp-utility:
-    esential:
+    essential:
       rust-coreutils_cp-utility:
     contents:
       /usr/bin/cp: { symlink: ../lib/cargo/bin/coreutils/cp }
 
   od-utility:
-    esential:
+    essential:
       rust-coreutils_od-utility:
     contents:
       /usr/bin/od: { symlink: ../lib/cargo/bin/coreutils/od }
 
   rmdir:
-    esential:
+    essential:
       rust-coreutils_rmdir:
     contents:
       /usr/bin/rmdir: { symlink: ../lib/cargo/bin/coreutils/rmdir }
 
   stat:
-    esential:
+    essential:
       rust-coreutils_stat:
     contents:
       /usr/bin/stat: { symlink: ../lib/cargo/bin/coreutils/stat }
 
   split:
-    esential:
+    essential:
       rust-coreutils_split:
     contents:
       /usr/bin/split: { symlink: ../lib/cargo/bin/coreutils/split }
   
   sleep:
-    esential:
+    essential:
       rust-coreutils_sleep:
     contents:
       /usr/bin/sleep: { symlink: ../lib/cargo/bin/coreutils/sleep }
 
   tail:
-    esential:
+    essential:
       rust-coreutils_tail:
     contents:
       /usr/bin/tail: { symlink: ../lib/cargo/bin/coreutils/tail }
 
   test:
-    esential:
+    essential:
       rust-coreutils_test:
     contents:
       /usr/bin/[:    { symlink: '../lib/cargo/bin/coreutils/[' }
       /usr/bin/test: { symlink: ../lib/cargo/bin/coreutils/test }
 
   timeout:
-    esential:
+    essential:
       rust-coreutils_timeout:
     contents:
       /usr/bin/timeout: { symlink: ../lib/cargo/bin/coreutils/timeout }
 
   tr-utility:
-    esential:
+    essential:
       rust-coreutils_tr-utility:
     contents:
       /usr/bin/tr: { symlink: ../lib/cargo/bin/coreutils/tr }
 
   unlink:
-    esential:
+    essential:
       rust-coreutils_unlink:
     contents:
       /usr/bin/unlink: { symlink: ../lib/cargo/bin/coreutils/unlink }
 
   cat:
-    esential:
+    essential:
       rust-coreutils_cat:
     contents:
       /usr/bin/cat: { symlink: ../lib/cargo/bin/coreutils/cat }
 
   ls-utility:
-    esential:
+    essential:
       rust-coreutils_ls-utility:
     contents:
       /usr/bin/ls: { symlink: ../lib/cargo/bin/coreutils/ls }
 
   uname:
-    esential:
+    essential:
       rust-coreutils_uname:
     contents:
       /usr/bin/uname: { symlink: ../lib/cargo/bin/coreutils/uname }
 
   wc-utility:
-    esential:
+    essential:
       rust-coreutils_wc-utility:
     contents:
       /usr/bin/wc: { symlink: ../lib/cargo/bin/coreutils/wc }
 
   chgrp:
-    esential:
+    essential:
       rust-coreutils_chgrp:
     contents:
       /usr/bin/chgrp: { symlink: ../lib/cargo/bin/coreutils/chgrp }
 
   realpath:
-    esential:
+    essential:
       rust-coreutils_realpath:
     contents:
       /usr/bin/realpath: { symlink: ../lib/cargo/bin/coreutils/realpath }
 
   sync:
-    esential:
+    essential:
       rust-coreutils_sync:
     contents:
       /usr/bin/sync: { symlink: ../lib/cargo/bin/coreutils/sync }
+
+  whoami:
+    essential:
+      rust-coreutils_whoami:
+    contents:
+      /usr/bin/whoami: { symlink: ../lib/cargo/bin/coreutils/whoami }
 
   copyright:
     contents:

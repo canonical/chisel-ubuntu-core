@@ -47,7 +47,7 @@ slices:
 
   services:
     essential:
-      init-system-helpers_bins:
+      init-system-helpers_core:
       libdrm2_libs:
       libplymouth5_libs:
       plymouth_libs:

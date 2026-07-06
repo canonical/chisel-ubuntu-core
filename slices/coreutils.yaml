@@ -125,11 +125,11 @@ slices:
     essential:
       coreutils-from-uutils_echo:
 
-  ln-utility:
+  ln-bin:
     essential:
       coreutils-from-uutils_ln-utility:
 
-  rm-utility:
+  rm-bin:
     essential:
       coreutils-from-uutils_rm-utility:
 
@@ -177,7 +177,7 @@ slices:
     essential:
       coreutils-from-uutils_date:
 
-  dd-utility:
+  dd-bin:
     essential:
       coreutils-from-uutils_dd-utility:
 
@@ -193,7 +193,7 @@ slices:
     essential:
       coreutils-from-uutils_install:
 
-  id-utility:
+  id-bin:
     essential:
       coreutils-from-uutils_id-utility:
 
@@ -209,11 +209,11 @@ slices:
     essential:
       coreutils-from-uutils_mktemp:
 
-  mv-utility:
+  mv-bin:
     essential:
       coreutils-from-uutils_mv-utility:
 
-  od-utility:
+  od-bin:
     essential:
       coreutils-from-uutils_od-utility:
 
@@ -241,7 +241,7 @@ slices:
     essential:
       coreutils-from-uutils_timeout:
 
-  tr-utility:
+  tr-bin:
     essential:
       coreutils-from-uutils_tr-utility:
 
@@ -253,7 +253,7 @@ slices:
     essential:
       coreutils-from-uutils_cat:
 
-  ls-utility:
+  ls-bin:
     essential:
       coreutils-from-uutils_ls-utility:
 
@@ -265,11 +265,11 @@ slices:
     essential:
       coreutils-from-uutils_sleep:
 
-  cp-utility:
+  cp-bin:
     essential:
       coreutils-from-uutils_cp-utility:
 
-  wc-utility:
+  wc-bin:
     essential:
       coreutils-from-uutils_wc-utility:
 
@@ -284,6 +284,10 @@ slices:
   sync:
     essential:
       coreutils-from-uutils_sync:
+
+  whoami:
+    essential:
+      coreutils-from-uutils_whoami:
 
   copyright:
     contents:

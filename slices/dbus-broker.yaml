@@ -7,7 +7,7 @@ slices:
   bins:
     essential:
       dbus-system-bus-common_services:
-      init-system-helpers_bins:
+      init-system-helpers_core:
       libapparmor1_libs:
       libaudit1_libs:
       libc6_libs:

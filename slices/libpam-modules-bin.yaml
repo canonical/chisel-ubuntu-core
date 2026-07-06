@@ -14,6 +14,12 @@ slices:
       libselinux1_libs:
       libsystemd0_libs:
     contents:
+      /usr/sbin/faillock:
+      /usr/sbin/mkhomedir_helper:
+      /usr/sbin/pam_extrausers_chkpwd:
+      /usr/sbin/pam_extrausers_update:
+      /usr/sbin/pam_timestamp_check:
+      /usr/sbin/pwhistory_helper:
       /usr/sbin/unix_chkpwd:
       /usr/sbin/unix_update:
 
@@ -46,6 +52,7 @@ slices:
 
   # Namespace isolation
   namespace:
+    hint: Isolate user namespaces
     essential:
       libpam0g_libs:
       libsystemd0_libs:
