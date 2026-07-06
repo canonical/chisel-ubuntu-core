@@ -253,6 +253,7 @@ slices:
       libsystemd-shared_libs:
       systemd_pcrlock:
     contents:
+      /usr/bin/systemd-detect-virt:
       /usr/lib/systemd/systemd-measure:
         arch: [amd64, arm64, armhf, riscv64, ppc64el, s390x]
       /usr/lib/systemd/systemd-pcrextend:
