@@ -23,18 +23,11 @@ slices:
       /usr/sbin/unix_chkpwd:
       /usr/sbin/unix_update:
 
-  scripts:
-    hint: Create home directories
+  # Password history management
+  pwhistory:
     essential:
-      base-files_bin:
-      coreutils_mkdir:
-      dash_bins:
-      libpam-modules_config:
-      sed_bins:
-    contents:
-      /usr/sbin/pam_namespace_helper:
-
-  services:
+      libc6_libs:
+      libpam0g_libs:
     contents:
       /usr/sbin/pwhistory_helper:
 
@@ -59,6 +52,7 @@ slices:
 
   # Namespace isolation
   namespace:
+    hint: Isolate user namespaces
     essential:
       libpam0g_libs:
       libsystemd0_libs:
