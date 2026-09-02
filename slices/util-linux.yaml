@@ -257,6 +257,12 @@ slices:
       /usr/sbin/agetty:
       /usr/sbin/getty:
 
+  nsenter:
+    essential:
+      libc6_libs:
+    contents:
+      /usr/bin/nsenter:
+
   copyright:
     contents:
       /usr/share/doc/util-linux/copyright:
