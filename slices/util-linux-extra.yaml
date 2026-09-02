@@ -119,6 +119,19 @@ slices:
     contents:
       /usr/bin/rename.ul:
 
+  # single binary slices
+  pivot-root:
+    essential:
+      libc6_libs:
+    contents:
+      /usr/bin/pivot_root:
+
+  switch-root:
+    essential:
+      libc6_libs:
+    contents:
+      /usr/bin/switch_root:
+
   copyright:
     contents:
       /usr/share/doc/util-linux-extra/copyright:
