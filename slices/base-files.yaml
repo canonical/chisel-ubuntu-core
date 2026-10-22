@@ -104,6 +104,7 @@ slices:
   profile:
     essential:
       base-files_etc:
+      base-files_locale:
     contents:
       /etc/profile: {copy: /usr/share/base-files/profile}
       /etc/profile.d/01-locale-fix.sh:
