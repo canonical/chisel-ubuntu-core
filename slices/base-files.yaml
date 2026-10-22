@@ -106,7 +106,6 @@ slices:
       base-files_etc:
     contents:
       /etc/profile: {copy: /usr/share/base-files/profile}
-      /etc/profile.d/01-locale-fix.sh:
       /usr/share/profile:
       /usr/share/profile.md5sums:
 
@@ -120,4 +119,5 @@ slices:
 
   locale:
     contents:
+      /etc/profile.d/01-locale-fix.sh:
       /usr/bin/locale-check:
