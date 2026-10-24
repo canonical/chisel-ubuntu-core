@@ -5,7 +5,7 @@ on:
   create:
   pull_request:
     branches:
-      - "ubuntu-*"
+      - "2*"
 
 concurrency:
   group: ci-${{ github.ref }}
